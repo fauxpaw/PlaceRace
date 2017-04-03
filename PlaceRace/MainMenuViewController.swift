@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
-class ViewController: UIViewController {
+class MainMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        var object = PFObject(className: "TestClass")
+        object.add("Banana", forKey: "favoriteFood")
+        object.add("Chocolate", forKey: "favoriteIceCream")
+        object.saveInBackground()
     }
 
     override func didReceiveMemoryWarning() {

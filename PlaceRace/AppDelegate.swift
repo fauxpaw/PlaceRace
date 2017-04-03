@@ -8,15 +8,25 @@
 
 import UIKit
 import CoreData
+import Parse
+import ParseUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let parseConfiguration = ParseClientConfiguration(block: { (ParseMutableClientConfiguration) -> Void in
+            ParseMutableClientConfiguration.applicationId = "sweeney.PlaceRace"
+            ParseMutableClientConfiguration.clientKey = "myMasterKey"
+            ParseMutableClientConfiguration.server = "https://quiet-fortress-46328.herokuapp.com/parse"
+        })
+        
+        Parse.initialize(with: parseConfiguration)
+        
         return true
     }
 

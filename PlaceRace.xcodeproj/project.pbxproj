@@ -8,22 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		4C4287651E9253E100A5323B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4287641E9253E100A5323B /* AppDelegate.swift */; };
-		4C4287671E9253E100A5323B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4287661E9253E100A5323B /* ViewController.swift */; };
+		4C4287671E9253E100A5323B /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4287661E9253E100A5323B /* MainMenuViewController.swift */; };
 		4C42876A1E9253E100A5323B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4287681E9253E100A5323B /* Main.storyboard */; };
 		4C42876D1E9253E100A5323B /* PlaceRace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C42876B1E9253E100A5323B /* PlaceRace.xcdatamodeld */; };
 		4C42876F1E9253E100A5323B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C42876E1E9253E100A5323B /* Assets.xcassets */; };
 		4C4287721E9253E100A5323B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4287701E9253E100A5323B /* LaunchScreen.storyboard */; };
+		E53E4D680BD0057835DFE8A1 /* Pods_PlaceRace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6D7C2AF8E56CD5EEE93E00 /* Pods_PlaceRace.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C4287611E9253E100A5323B /* PlaceRace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceRace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4287641E9253E100A5323B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C4287661E9253E100A5323B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C4287661E9253E100A5323B /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		4C4287691E9253E100A5323B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C42876C1E9253E100A5323B /* PlaceRace.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlaceRace.xcdatamodel; sourceTree = "<group>"; };
 		4C42876E1E9253E100A5323B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C4287711E9253E100A5323B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C4287731E9253E100A5323B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C56DCCA1E92D2E600344232 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Pods/../build/Debug-iphoneos/Bolts/Bolts.framework"; sourceTree = "<group>"; };
+		4C56DCCB1E92D2E600344232 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Pods/../build/Debug-iphoneos/Parse/Parse.framework"; sourceTree = "<group>"; };
+		4C56DCCC1E92D2E600344232 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "Pods/../build/Debug-iphoneos/ParseUI/ParseUI.framework"; sourceTree = "<group>"; };
+		6BF3C0FF5BBFEA74F2B49E7C /* Pods-PlaceRace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRace.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace.release.xcconfig"; sourceTree = "<group>"; };
+		B74204DA117028ECED921A5E /* Pods-PlaceRace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace.debug.xcconfig"; sourceTree = "<group>"; };
+		EE6D7C2AF8E56CD5EEE93E00 /* Pods_PlaceRace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaceRace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53E4D680BD0057835DFE8A1 /* Pods_PlaceRace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,8 @@
 			children = (
 				4C4287631E9253E100A5323B /* PlaceRace */,
 				4C4287621E9253E100A5323B /* Products */,
+				AC2A6D5C71A1A599D819DEBD /* Frameworks */,
+				F2BB6BA63F89EDA717B18D4D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +66,91 @@
 		4C4287631E9253E100A5323B /* PlaceRace */ = {
 			isa = PBXGroup;
 			children = (
+				4C4287791E925E5900A5323B /* App Global */,
+				4C42877A1E925E6800A5323B /* Controller */,
+				4C42877B1E925E7300A5323B /* View */,
+			);
+			path = PlaceRace;
+			sourceTree = "<group>";
+		};
+		4C4287791E925E5900A5323B /* App Global */ = {
+			isa = PBXGroup;
+			children = (
 				4C4287641E9253E100A5323B /* AppDelegate.swift */,
-				4C4287661E9253E100A5323B /* ViewController.swift */,
-				4C4287681E9253E100A5323B /* Main.storyboard */,
 				4C42876E1E9253E100A5323B /* Assets.xcassets */,
-				4C4287701E9253E100A5323B /* LaunchScreen.storyboard */,
 				4C4287731E9253E100A5323B /* Info.plist */,
 				4C42876B1E9253E100A5323B /* PlaceRace.xcdatamodeld */,
 			);
-			path = PlaceRace;
+			name = "App Global";
+			sourceTree = "<group>";
+		};
+		4C42877A1E925E6800A5323B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C42877F1E9260D300A5323B /* Main Menu */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4C42877B1E925E7300A5323B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C4287701E9253E100A5323B /* LaunchScreen.storyboard */,
+				4C4287681E9253E100A5323B /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4C42877C1E92606A00A5323B /* User Options */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "User Options";
+			sourceTree = "<group>";
+		};
+		4C42877D1E92609B00A5323B /* Create Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Create Game";
+			sourceTree = "<group>";
+		};
+		4C42877E1E9260B900A5323B /* Join Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Join Game";
+			sourceTree = "<group>";
+		};
+		4C42877F1E9260D300A5323B /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				4C4287661E9253E100A5323B /* MainMenuViewController.swift */,
+				4C42877E1E9260B900A5323B /* Join Game */,
+				4C42877D1E92609B00A5323B /* Create Game */,
+				4C42877C1E92606A00A5323B /* User Options */,
+			);
+			name = "Main Menu";
+			sourceTree = "<group>";
+		};
+		AC2A6D5C71A1A599D819DEBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C56DCCA1E92D2E600344232 /* Bolts.framework */,
+				4C56DCCB1E92D2E600344232 /* Parse.framework */,
+				4C56DCCC1E92D2E600344232 /* ParseUI.framework */,
+				EE6D7C2AF8E56CD5EEE93E00 /* Pods_PlaceRace.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2BB6BA63F89EDA717B18D4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B74204DA117028ECED921A5E /* Pods-PlaceRace.debug.xcconfig */,
+				6BF3C0FF5BBFEA74F2B49E7C /* Pods-PlaceRace.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C4287761E9253E100A5323B /* Build configuration list for PBXNativeTarget "PlaceRace" */;
 			buildPhases = (
+				D83D1B4794260A550FDB4861 /* [CP] Check Pods Manifest.lock */,
 				4C42875D1E9253E100A5323B /* Sources */,
 				4C42875E1E9253E100A5323B /* Frameworks */,
 				4C42875F1E9253E100A5323B /* Resources */,
+				E5AE8BF9426E839AF79F9AE5 /* [CP] Embed Pods Frameworks */,
+				12F8FF779D6F87318C818066 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,13 +224,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12F8FF779D6F87318C818066 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D83D1B4794260A550FDB4861 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E5AE8BF9426E839AF79F9AE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4C42875D1E9253E100A5323B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4C42876D1E9253E100A5323B /* PlaceRace.xcdatamodeld in Sources */,
-				4C4287671E9253E100A5323B /* ViewController.swift in Sources */,
+				4C4287671E9253E100A5323B /* MainMenuViewController.swift in Sources */,
 				4C4287651E9253E100A5323B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,11 +400,20 @@
 		};
 		4C4287771E9253E100A5323B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B74204DA117028ECED921A5E /* Pods-PlaceRace.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NXQBD8W8TS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Bolts\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Parse\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/ParseUI\"",
+				);
 				INFOPLIST_FILE = PlaceRace/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
 				PRODUCT_BUNDLE_IDENTIFIER = sweeney.PlaceRace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -276,11 +422,20 @@
 		};
 		4C4287781E9253E100A5323B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BF3C0FF5BBFEA74F2B49E7C /* Pods-PlaceRace.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NXQBD8W8TS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Bolts\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Parse\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/ParseUI\"",
+				);
 				INFOPLIST_FILE = PlaceRace/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
 				PRODUCT_BUNDLE_IDENTIFIER = sweeney.PlaceRace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -306,6 +461,7 @@
 				4C4287781E9253E100A5323B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
