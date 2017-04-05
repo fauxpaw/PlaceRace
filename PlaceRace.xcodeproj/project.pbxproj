@@ -7,16 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C11D1D21E93D8C6005F7CC4 /* InputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1D11E93D8C6005F7CC4 /* InputValidation.swift */; };
+		4C11D1D41E93EC6B005F7CC4 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1D31E93EC6B005F7CC4 /* SignupViewController.swift */; };
+		4C11D1D71E9433E4005F7CC4 /* TextViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1D61E9433E4005F7CC4 /* TextViewManager.swift */; };
+		4C11D1D91E9435D2005F7CC4 /* SignupIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1D81E9435D2005F7CC4 /* SignupIssue.swift */; };
 		4C4287651E9253E100A5323B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4287641E9253E100A5323B /* AppDelegate.swift */; };
 		4C4287671E9253E100A5323B /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4287661E9253E100A5323B /* MainMenuViewController.swift */; };
 		4C42876A1E9253E100A5323B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4287681E9253E100A5323B /* Main.storyboard */; };
 		4C42876D1E9253E100A5323B /* PlaceRace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C42876B1E9253E100A5323B /* PlaceRace.xcdatamodeld */; };
 		4C42876F1E9253E100A5323B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C42876E1E9253E100A5323B /* Assets.xcassets */; };
 		4C4287721E9253E100A5323B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4287701E9253E100A5323B /* LaunchScreen.storyboard */; };
+		4CABC2D71E9399D300CF8B19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */; };
 		E53E4D680BD0057835DFE8A1 /* Pods_PlaceRace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6D7C2AF8E56CD5EEE93E00 /* Pods_PlaceRace.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C11D1D11E93D8C6005F7CC4 /* InputValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputValidation.swift; sourceTree = "<group>"; };
+		4C11D1D31E93EC6B005F7CC4 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		4C11D1D61E9433E4005F7CC4 /* TextViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewManager.swift; sourceTree = "<group>"; };
+		4C11D1D81E9435D2005F7CC4 /* SignupIssue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupIssue.swift; sourceTree = "<group>"; };
 		4C4287611E9253E100A5323B /* PlaceRace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceRace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4287641E9253E100A5323B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4287661E9253E100A5323B /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +37,7 @@
 		4C56DCCA1E92D2E600344232 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Pods/../build/Debug-iphoneos/Bolts/Bolts.framework"; sourceTree = "<group>"; };
 		4C56DCCB1E92D2E600344232 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Pods/../build/Debug-iphoneos/Parse/Parse.framework"; sourceTree = "<group>"; };
 		4C56DCCC1E92D2E600344232 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "Pods/../build/Debug-iphoneos/ParseUI/ParseUI.framework"; sourceTree = "<group>"; };
+		4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6BF3C0FF5BBFEA74F2B49E7C /* Pods-PlaceRace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRace.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace.release.xcconfig"; sourceTree = "<group>"; };
 		B74204DA117028ECED921A5E /* Pods-PlaceRace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace.debug.xcconfig"; sourceTree = "<group>"; };
 		EE6D7C2AF8E56CD5EEE93E00 /* Pods_PlaceRace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaceRace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C11D1D51E943359005F7CC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C11D1D61E9433E4005F7CC4 /* TextViewManager.swift */,
+				4C11D1D81E9435D2005F7CC4 /* SignupIssue.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		4C4287581E9253E100A5323B = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +87,7 @@
 			children = (
 				4C4287791E925E5900A5323B /* App Global */,
 				4C42877A1E925E6800A5323B /* Controller */,
+				4C11D1D51E943359005F7CC4 /* Model */,
 				4C42877B1E925E7300A5323B /* View */,
 			);
 			path = PlaceRace;
@@ -80,6 +100,7 @@
 				4C42876E1E9253E100A5323B /* Assets.xcassets */,
 				4C4287731E9253E100A5323B /* Info.plist */,
 				4C42876B1E9253E100A5323B /* PlaceRace.xcdatamodeld */,
+				4C11D1D11E93D8C6005F7CC4 /* InputValidation.swift */,
 			);
 			name = "App Global";
 			sourceTree = "<group>";
@@ -126,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				4C4287661E9253E100A5323B /* MainMenuViewController.swift */,
+				4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */,
+				4C11D1D31E93EC6B005F7CC4 /* SignupViewController.swift */,
 				4C42877E1E9260B900A5323B /* Join Game */,
 				4C42877D1E92609B00A5323B /* Create Game */,
 				4C42877C1E92606A00A5323B /* User Options */,
@@ -277,8 +300,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C11D1D41E93EC6B005F7CC4 /* SignupViewController.swift in Sources */,
+				4CABC2D71E9399D300CF8B19 /* LoginViewController.swift in Sources */,
 				4C42876D1E9253E100A5323B /* PlaceRace.xcdatamodeld in Sources */,
+				4C11D1D91E9435D2005F7CC4 /* SignupIssue.swift in Sources */,
+				4C11D1D71E9433E4005F7CC4 /* TextViewManager.swift in Sources */,
 				4C4287671E9253E100A5323B /* MainMenuViewController.swift in Sources */,
+				4C11D1D21E93D8C6005F7CC4 /* InputValidation.swift in Sources */,
 				4C4287651E9253E100A5323B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
