@@ -40,6 +40,15 @@ class MainMenuViewController: UIViewController, PFLogInViewControllerDelegate {
         }
     }
     
+    fileprivate func logout() {
+        
+        if PFUser.current() != nil {
+            PFUser.logOut()
+            self.login()
+        }
+        
+    }
+    
     //MARK: PF_LOGIN_DELEGATE
     
     public func log(_ logInController: PFLogInViewController, didLogIn user: PFUser) {
@@ -50,13 +59,16 @@ class MainMenuViewController: UIViewController, PFLogInViewControllerDelegate {
     public func log(_ logInController: PFLogInViewController, didFailToLogInWithError error: Error?) {
         
         if let error = error {
-            let alertController = UIAlertController(title: "Pet Pageant", message: "Login failed - \(error.localizedDescription)", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "PlaceRace", message: "Login failed - \(error.localizedDescription)", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
             
             self.loginVC.present(alertController, animated: true, completion: nil)
         }
     }
 
+    @IBAction func logoutButtonPressed(_ sender: Any) {
+        self.logout()
+    }
     
     
 }

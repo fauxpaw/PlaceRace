@@ -41,7 +41,6 @@ class SignupViewController: PFSignUpViewController, UITextViewDelegate {
         textView.isSelectable = false
         textView.textAlignment = .center
         textView.textColor = gInvalidItemBorderColor
-        textView.backgroundColor = UIColor.black
         textView.font = UIFont(name: "Verdana", size: 16)
         self.errorsList = textView
         self.view.addSubview(textView)
@@ -58,9 +57,11 @@ class SignupViewController: PFSignUpViewController, UITextViewDelegate {
     override func textFieldDidEndEditing(_ textField: UITextField) {
         guard let text = textField.text else {return}
         if textField == self.userNameField && text.characters.count > 2 {
+            weak var weakSelf = self
             let query = PFQuery(className: "_User")
             query.whereKey("username", equalTo: text)
             query.findObjectsInBackground(block: { (objects, error) in
+                let strongSelf = weakSelf
                 if let error = error {
                     print(error.localizedDescription)
                 }
@@ -74,12 +75,16 @@ class SignupViewController: PFSignUpViewController, UITextViewDelegate {
                     else if names.count > 0 {
                         textField.layer.borderWidth = gBorderWidthDefault
                         textField.layer.borderColor = gInvalidItemBorderColor.cgColor
+                        //let issue = SignupIssue(withText: "Username is not available", withType: )
+                        let issue = SignupIssue(withText: "Username is not available", withType: .nameTaken)
+                        //TODO: weakself
+                        strongSelf?.errorsList.addIssue(issue: issue)
                     }
                 }
             })
         }
     }
-    
+        
     func textFieldDidChange(textField: UITextField) {
         
         guard let text = textField.text else {return}
@@ -105,6 +110,7 @@ class SignupViewController: PFSignUpViewController, UITextViewDelegate {
             
             //username
         } else if textField == self.userNameField {
+            errorsList.removeIssue(forType: .nameTaken)
             if text.characters.count < 3 && text.characters.count > 0 {
                 textField.layer.borderColor = gInvalidItemBorderColor.cgColor
                 textField.layer.borderWidth = gBorderWidthDefault
@@ -121,7 +127,7 @@ class SignupViewController: PFSignUpViewController, UITextViewDelegate {
             if !validateEmail(candidate: text) && text.characters.count > 0 {
                 textField.layer.borderColor = gInvalidItemBorderColor.cgColor
                 textField.layer.borderWidth = gBorderWidthDefault
-                let issue = SignupIssue(withText: "Email must be of the form '<user>@<domain>'", withType: .emailFormat)
+                let issue = SignupIssue(withText: "Not a valid email", withType: .emailFormat)
                 errorsList.addIssue(issue: issue)
             } else if validateEmail(candidate: text) {
                 textField.layer.borderWidth = gBorderWidthDefault
@@ -139,7 +145,7 @@ class SignupViewController: PFSignUpViewController, UITextViewDelegate {
             if text != self.emailField.text && text.characters.count > 0 {
                 textField.layer.borderColor = gInvalidItemBorderColor.cgColor
                 textField.layer.borderWidth = gBorderWidthDefault
-                let issue = SignupIssue(withText: "Email fields do not match!", withType: .emailMismatch)
+                let issue = SignupIssue(withText: "Email fields do not match", withType: .emailMismatch)
                 errorsList.addIssue(issue: issue)
             } else if text == self.emailField.text && text.characters.count > 0{
                 textField.layer.borderColor = gValidItemBorderColor.cgColor
@@ -153,6 +159,4 @@ class SignupViewController: PFSignUpViewController, UITextViewDelegate {
             }
         }
     }
-    
-    
 }
