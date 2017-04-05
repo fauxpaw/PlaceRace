@@ -11,6 +11,7 @@
 		4C11D1D41E93EC6B005F7CC4 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1D31E93EC6B005F7CC4 /* SignupViewController.swift */; };
 		4C11D1D71E9433E4005F7CC4 /* TextViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1D61E9433E4005F7CC4 /* TextViewManager.swift */; };
 		4C11D1D91E9435D2005F7CC4 /* SignupIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1D81E9435D2005F7CC4 /* SignupIssue.swift */; };
+		4C11D1DD1E954999005F7CC4 /* CreateGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1DC1E954999005F7CC4 /* CreateGameViewController.swift */; };
 		4C4287651E9253E100A5323B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4287641E9253E100A5323B /* AppDelegate.swift */; };
 		4C4287671E9253E100A5323B /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4287661E9253E100A5323B /* MainMenuViewController.swift */; };
 		4C42876A1E9253E100A5323B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4287681E9253E100A5323B /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		4C11D1D31E93EC6B005F7CC4 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		4C11D1D61E9433E4005F7CC4 /* TextViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewManager.swift; sourceTree = "<group>"; };
 		4C11D1D81E9435D2005F7CC4 /* SignupIssue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupIssue.swift; sourceTree = "<group>"; };
+		4C11D1DC1E954999005F7CC4 /* CreateGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGameViewController.swift; sourceTree = "<group>"; };
 		4C4287611E9253E100A5323B /* PlaceRace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceRace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4287641E9253E100A5323B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4287661E9253E100A5323B /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,20 @@
 				4C11D1D81E9435D2005F7CC4 /* SignupIssue.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		4C11D1DA1E954922005F7CC4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		4C11D1DB1E954933005F7CC4 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Options;
 			sourceTree = "<group>";
 		};
 		4C4287581E9253E100A5323B = {
@@ -122,25 +138,19 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		4C42877C1E92606A00A5323B /* User Options */ = {
+		4C42877D1E92609B00A5323B /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				4C11D1DC1E954999005F7CC4 /* CreateGameViewController.swift */,
 			);
-			name = "User Options";
+			name = Create;
 			sourceTree = "<group>";
 		};
-		4C42877D1E92609B00A5323B /* Create Game */ = {
+		4C42877E1E9260B900A5323B /* Join */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = "Create Game";
-			sourceTree = "<group>";
-		};
-		4C42877E1E9260B900A5323B /* Join Game */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Join Game";
+			name = Join;
 			sourceTree = "<group>";
 		};
 		4C42877F1E9260D300A5323B /* Main Menu */ = {
@@ -149,9 +159,10 @@
 				4C4287661E9253E100A5323B /* MainMenuViewController.swift */,
 				4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */,
 				4C11D1D31E93EC6B005F7CC4 /* SignupViewController.swift */,
-				4C42877E1E9260B900A5323B /* Join Game */,
-				4C42877D1E92609B00A5323B /* Create Game */,
-				4C42877C1E92606A00A5323B /* User Options */,
+				4C11D1DB1E954933005F7CC4 /* Options */,
+				4C11D1DA1E954922005F7CC4 /* Profile */,
+				4C42877E1E9260B900A5323B /* Join */,
+				4C42877D1E92609B00A5323B /* Create */,
 			);
 			name = "Main Menu";
 			sourceTree = "<group>";
@@ -300,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C11D1DD1E954999005F7CC4 /* CreateGameViewController.swift in Sources */,
 				4C11D1D41E93EC6B005F7CC4 /* SignupViewController.swift in Sources */,
 				4CABC2D71E9399D300CF8B19 /* LoginViewController.swift in Sources */,
 				4C42876D1E9253E100A5323B /* PlaceRace.xcdatamodeld in Sources */,
