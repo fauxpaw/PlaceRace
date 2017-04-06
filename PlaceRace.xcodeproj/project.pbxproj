@@ -19,6 +19,12 @@
 		4C42876F1E9253E100A5323B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C42876E1E9253E100A5323B /* Assets.xcassets */; };
 		4C4287721E9253E100A5323B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4287701E9253E100A5323B /* LaunchScreen.storyboard */; };
 		4CABC2D71E9399D300CF8B19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */; };
+		4CE667731E965EF1009135F0 /* GameSettingPublicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE667721E965EF1009135F0 /* GameSettingPublicTableViewCell.swift */; };
+		4CE667761E965F49009135F0 /* GameSettingPlayerCountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE667751E965F49009135F0 /* GameSettingPlayerCountTableViewCell.swift */; };
+		4CE667781E965F5B009135F0 /* GameSettingLocationCountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE667771E965F5B009135F0 /* GameSettingLocationCountTableViewCell.swift */; };
+		4CE6677A1E965F77009135F0 /* GameSettingTimeLimitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE667791E965F77009135F0 /* GameSettingTimeLimitTableViewCell.swift */; };
+		4CE6677C1E965FA0009135F0 /* GameSettingPowerupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6677B1E965FA0009135F0 /* GameSettingPowerupsTableViewCell.swift */; };
+		4CE6677E1E966F36009135F0 /* GlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6677D1E966F36009135F0 /* GlobalVars.swift */; };
 		E53E4D680BD0057835DFE8A1 /* Pods_PlaceRace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6D7C2AF8E56CD5EEE93E00 /* Pods_PlaceRace.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +46,12 @@
 		4C56DCCB1E92D2E600344232 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Pods/../build/Debug-iphoneos/Parse/Parse.framework"; sourceTree = "<group>"; };
 		4C56DCCC1E92D2E600344232 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "Pods/../build/Debug-iphoneos/ParseUI/ParseUI.framework"; sourceTree = "<group>"; };
 		4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4CE667721E965EF1009135F0 /* GameSettingPublicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingPublicTableViewCell.swift; sourceTree = "<group>"; };
+		4CE667751E965F49009135F0 /* GameSettingPlayerCountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingPlayerCountTableViewCell.swift; sourceTree = "<group>"; };
+		4CE667771E965F5B009135F0 /* GameSettingLocationCountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingLocationCountTableViewCell.swift; sourceTree = "<group>"; };
+		4CE667791E965F77009135F0 /* GameSettingTimeLimitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingTimeLimitTableViewCell.swift; sourceTree = "<group>"; };
+		4CE6677B1E965FA0009135F0 /* GameSettingPowerupsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingPowerupsTableViewCell.swift; sourceTree = "<group>"; };
+		4CE6677D1E966F36009135F0 /* GlobalVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVars.swift; sourceTree = "<group>"; };
 		6BF3C0FF5BBFEA74F2B49E7C /* Pods-PlaceRace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRace.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace.release.xcconfig"; sourceTree = "<group>"; };
 		B74204DA117028ECED921A5E /* Pods-PlaceRace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace.debug.xcconfig"; sourceTree = "<group>"; };
 		EE6D7C2AF8E56CD5EEE93E00 /* Pods_PlaceRace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaceRace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,8 +72,8 @@
 		4C11D1D51E943359005F7CC4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4C11D1D61E9433E4005F7CC4 /* TextViewManager.swift */,
-				4C11D1D81E9435D2005F7CC4 /* SignupIssue.swift */,
+				4C6FF24E1E95C9730043E7EA /* Signup */,
+				4CE667741E965EFC009135F0 /* Game Options */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -117,6 +129,7 @@
 				4C4287731E9253E100A5323B /* Info.plist */,
 				4C42876B1E9253E100A5323B /* PlaceRace.xcdatamodeld */,
 				4C11D1D11E93D8C6005F7CC4 /* InputValidation.swift */,
+				4CE6677D1E966F36009135F0 /* GlobalVars.swift */,
 			);
 			name = "App Global";
 			sourceTree = "<group>";
@@ -156,15 +169,44 @@
 		4C42877F1E9260D300A5323B /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
-				4C4287661E9253E100A5323B /* MainMenuViewController.swift */,
-				4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */,
-				4C11D1D31E93EC6B005F7CC4 /* SignupViewController.swift */,
+				4C6FF24D1E9599880043E7EA /* Menu */,
 				4C11D1DB1E954933005F7CC4 /* Options */,
 				4C11D1DA1E954922005F7CC4 /* Profile */,
 				4C42877E1E9260B900A5323B /* Join */,
 				4C42877D1E92609B00A5323B /* Create */,
 			);
 			name = "Main Menu";
+			sourceTree = "<group>";
+		};
+		4C6FF24D1E9599880043E7EA /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				4C4287661E9253E100A5323B /* MainMenuViewController.swift */,
+				4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */,
+				4C11D1D31E93EC6B005F7CC4 /* SignupViewController.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		4C6FF24E1E95C9730043E7EA /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				4C11D1D61E9433E4005F7CC4 /* TextViewManager.swift */,
+				4C11D1D81E9435D2005F7CC4 /* SignupIssue.swift */,
+			);
+			name = Signup;
+			sourceTree = "<group>";
+		};
+		4CE667741E965EFC009135F0 /* Game Options */ = {
+			isa = PBXGroup;
+			children = (
+				4CE667721E965EF1009135F0 /* GameSettingPublicTableViewCell.swift */,
+				4CE667751E965F49009135F0 /* GameSettingPlayerCountTableViewCell.swift */,
+				4CE667771E965F5B009135F0 /* GameSettingLocationCountTableViewCell.swift */,
+				4CE667791E965F77009135F0 /* GameSettingTimeLimitTableViewCell.swift */,
+				4CE6677B1E965FA0009135F0 /* GameSettingPowerupsTableViewCell.swift */,
+			);
+			name = "Game Options";
 			sourceTree = "<group>";
 		};
 		AC2A6D5C71A1A599D819DEBD /* Frameworks */ = {
@@ -312,10 +354,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C11D1DD1E954999005F7CC4 /* CreateGameViewController.swift in Sources */,
+				4CE667731E965EF1009135F0 /* GameSettingPublicTableViewCell.swift in Sources */,
 				4C11D1D41E93EC6B005F7CC4 /* SignupViewController.swift in Sources */,
+				4CE6677C1E965FA0009135F0 /* GameSettingPowerupsTableViewCell.swift in Sources */,
+				4CE6677E1E966F36009135F0 /* GlobalVars.swift in Sources */,
 				4CABC2D71E9399D300CF8B19 /* LoginViewController.swift in Sources */,
 				4C42876D1E9253E100A5323B /* PlaceRace.xcdatamodeld in Sources */,
 				4C11D1D91E9435D2005F7CC4 /* SignupIssue.swift in Sources */,
+				4CE667761E965F49009135F0 /* GameSettingPlayerCountTableViewCell.swift in Sources */,
+				4CE667781E965F5B009135F0 /* GameSettingLocationCountTableViewCell.swift in Sources */,
+				4CE6677A1E965F77009135F0 /* GameSettingTimeLimitTableViewCell.swift in Sources */,
 				4C11D1D71E9433E4005F7CC4 /* TextViewManager.swift in Sources */,
 				4C4287671E9253E100A5323B /* MainMenuViewController.swift in Sources */,
 				4C11D1D21E93D8C6005F7CC4 /* InputValidation.swift in Sources */,
