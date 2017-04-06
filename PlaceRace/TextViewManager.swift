@@ -11,7 +11,7 @@ import UIKit
 
 class TextViewManager: UITextView  {
     
-    //TODO: @Not exhausted - convert data structure to use dictionary for better performance
+    //TODO: convert data structure to use dictionary for better performance
     
     var signupErrors = [SignupIssue]() {
         didSet {
