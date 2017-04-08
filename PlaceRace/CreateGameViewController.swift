@@ -74,6 +74,7 @@ class CreateGameViewController: UITableViewController  {
         print("Time limit = \(timelimit)")
         print("Powerups = \(powerUpsEnabled)")
         
+        self.performSegue(withIdentifier: "specifyPlayfield", sender: self)
+        
     }
-    
 }
