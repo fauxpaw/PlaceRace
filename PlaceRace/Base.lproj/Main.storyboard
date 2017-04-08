@@ -212,7 +212,7 @@
             </objects>
             <point key="canvasLocation" x="1056.8" y="-296.40179910044981"/>
         </scene>
-        <!--Game Options-->
+        <!--Choose Game Options-->
         <scene sceneID="0bI-ak-toc">
             <objects>
                 <tableViewController id="prT-oe-ABW" customClass="CreateGameViewController" customModule="PlaceRace" customModuleProvider="target" sceneMemberID="viewController">
@@ -386,7 +386,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Game Options" id="crh-pa-XP2">
+                    <navigationItem key="navigationItem" title="Choose Game Options" id="crh-pa-XP2">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="Dwc-ti-V9g">
                             <connections>
                                 <action selector="nextButtonSelected:" destination="prT-oe-ABW" id="s4j-tw-tYd"/>
@@ -395,17 +395,17 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="meq-bD-BPq" kind="show" identifier="createGeamePublic" id="ixg-dY-AlK"/>
+                        <segue destination="meq-bD-BPq" kind="show" identifier="specifyPlayfield" id="ixg-dY-AlK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCW-ZZ-CdP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056.8" y="404.34782608695656"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Playfield Bounds-->
         <scene sceneID="WGb-os-sPt">
             <objects>
-                <viewController id="meq-bD-BPq" sceneMemberID="viewController">
+                <viewController id="meq-bD-BPq" customClass="CreatePlayAreaViewController" customModule="PlaceRace" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gl9-xj-Mho"/>
                         <viewControllerLayoutGuide type="bottom" id="xPB-XG-N9p"/>
@@ -414,16 +414,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Public Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcg-bf-D9t">
-                                <rect key="frame" x="48" y="308" width="279" height="50"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MC2-s5-ZAg">
+                                <rect key="frame" x="0.0" y="64" width="382" height="482"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1000" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3SM-1I-inP">
+                                <rect key="frame" x="222" y="582" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Radius:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mw-SX-Hz8">
+                                <rect key="frame" x="155" y="579" width="59" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="m." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXX-tY-pY8">
+                                <rect key="frame" x="312" y="587" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Select Playfield Bounds" id="riv-h2-mOQ">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="hlW-xl-cdm"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="MC2-s5-ZAg" id="RHp-UJ-T8H"/>
+                        <outlet property="radiusInputField" destination="3SM-1I-inP" id="b0u-aX-x5V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mev-YG-RXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
