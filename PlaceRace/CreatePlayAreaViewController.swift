@@ -9,29 +9,40 @@
 import UIKit
 import MapKit
 
-
 class CreatePlayAreaViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var radiusInputField: UITextField!
     let radiusMaxDigitLength = 4
-    var radius: Int = 1000
+    var radius: Int = 1000 {
+        didSet {
+            self.newOverlay()
+        }
+    }
+    
     let locationManager = CLLocationManager()
     var managerCanUpdate = false
     var usersLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: CLLocationDegrees(0), longitude: CLLocationDegrees(0))
     var currentEpicenter: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: CLLocationDegrees(0), longitude: CLLocationDegrees(0)) {
         didSet {
-            self.zoomMapToRadiusBounds()
+            self.applyAnnotation()
+            self.newOverlay()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setup()
+        
+    }
+    
+    func setup() {
+        self.setupMapView()
         self.setupLocationManager()
+        self.setupTap()
         self.setupLongPressGesture()
         self.setupKeyboardStuff()
-        mapView.delegate = self
-        
+        self.setupTextField()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -39,6 +50,14 @@ class CreatePlayAreaViewController: UIViewController, MKMapViewDelegate, UITextF
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
+    func setupMapView() {
+        self.mapView.delegate = self
+    }
+    
+    func setupTextField() {
+        self.radiusInputField.delegate = self
+        self.radiusInputField.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: .editingChanged)
+    }
     
     func setupLocationManager() {
         locationManager.delegate = self
@@ -63,44 +82,75 @@ class CreatePlayAreaViewController: UIViewController, MKMapViewDelegate, UITextF
     
     func zoomMapToRadiusBounds() {
         
-        let region = MKCoordinateRegionMakeWithDistance(self.currentEpicenter, CLLocationDistance(self.radius), CLLocationDistance(self.radius))
-        //mapView.regionThatFits(region)
+        let region = MKCoordinateRegionMakeWithDistance(self.currentEpicenter, CLLocationDistance(self.radius), CLLocationDistance(Double(self.radius) * 2 + Double(self.radius) * 0.5))
         mapView.setRegion(region, animated: true)
-        
     }
     
-    func centerMapOnCurrentLocation () {
-        
+    //MARK: OVERLAY METHODS
+    func newOverlay() {
+        self.clearOverlays()
+        self.applyOverlayToMap()
+        self.zoomMapToRadiusBounds()
     }
     
     func applyOverlayToMap() {
-        //let overlay = MKCircle(center: <#T##CLLocationCoordinate2D#>, radius: <#T##CLLocationDistance#>)
+        let overlay = MKCircle(center: self.currentEpicenter, radius: CLLocationDistance(self.radius))
+    
+        self.mapView.add(overlay)
     }
     
-    func clearAllAnnotations() {
-        //self.mapView.removeAnnotation(<#T##annotation: MKAnnotation##MKAnnotation#>)
+    func clearOverlays() {
+        self.mapView.removeOverlays(self.mapView.overlays)
     }
     
-    func dropPinAtPress() {
-        self.clearAllAnnotations()
-        
-        self.applyOverlayToMap()
+    //MARK: ANNOTATION METHODS
+    
+    func clearAnnotations() {
+        self.mapView.removeAnnotations(self.mapView.annotations)
+    }
+    
+    func applyAnnotation() {
+        self.clearAnnotations()
+        self.createAnnotation()
+        self.zoomMapToRadiusBounds()
+    }
+    
+    func createAnnotation() {
+        let pin = MKPointAnnotation()
+        pin.coordinate = self.currentEpicenter
+        pin.title = "Play Area Center"
+        //let view = MKPinAnnotationView(annotation: pin, reuseIdentifier: "pin")
+        //view.canShowCallout = true
+        //view.animatesDrop = true
+        mapView.addAnnotation(pin)
     }
     
     //MARK: TEXTFIELD DELEGATE
     
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        if let textLength = textField.text {
-            if textLength.characters.count < radiusMaxDigitLength {
-                return true
-            } else {
+        guard let current = textField.text else { return false}
+        
+        if current.characters.count == radiusMaxDigitLength && string != "" {
                 return false
-            }
         }
         
-        return false
+        return true
     }
+    
+    func textFieldDidChange(textField: UITextField) {
+        guard let text = textField.text else {return}
+
+        if text.characters.count == 0 {
+            self.radius = 1000
+        } else {
+            guard let asInt = Int(text) else {return}
+            self.radius = asInt
+        }
+        print(self.radius)
+    }
+    
     //MARK: KEYBOARD SHENANIGANS
     
     func setupKeyboardStuff() {
@@ -108,6 +158,10 @@ class CreatePlayAreaViewController: UIViewController, MKMapViewDelegate, UITextF
         let center: NotificationCenter = NotificationCenter.default
         center.addObserver(self, selector: #selector(CreatePlayAreaViewController.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         center.addObserver(self, selector: #selector(CreatePlayAreaViewController.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    func hideRadiusInputKeyboard() {
+       // self.radiusInputField
     }
     
     func keyboardWillShow(notification: NSNotification) {
@@ -122,8 +176,6 @@ class CreatePlayAreaViewController: UIViewController, MKMapViewDelegate, UITextF
         UIView.animate(withDuration: 0.25, delay: 0.25, options: UIViewAnimationOptions.curveEaseInOut, animations: {
             self.view.frame = CGRect(x: 0, y: (self.view.frame.origin.y - keyboardHeight), width: self.view.bounds.width, height: self.view.bounds.height)
         }, completion: nil)
-        //CGRect(x: 0, y: (self.mapView.frame.origin.y - keyboardHeight), width: self.view.bounds.width, height: self.view.bounds.height)
-        
     }
     
     func keyboardWillHide(notification: NSNotification) {
@@ -156,7 +208,25 @@ class CreatePlayAreaViewController: UIViewController, MKMapViewDelegate, UITextF
         self.mapView.addGestureRecognizer(gesture)
     }
     
-    func handleLongPress(sender: UILongPressGestureRecognizer) {
-        self.dropPinAtPress()
+    func handleLongPress(gesture: UILongPressGestureRecognizer) {
+        if gesture.state == .began{
+            let touchPoint = gesture.location(in: self.mapView)
+            let coords = self.mapView.convert(touchPoint, toCoordinateFrom: self.mapView)
+            self.currentEpicenter = coords
+        }
     }
+    
+    func setupTap() {
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(self.view.endEditing(_:))))
+    }
+    
+    //MARK: MAPVIEW DELEGATE
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let circle = MKCircleRenderer(overlay: overlay)
+        circle.strokeColor = UIColor.blue.withAlphaComponent(0.4)
+        circle.fillColor = UIColor.yellow.withAlphaComponent(0.4)
+        return circle
+    }
+    
 }
