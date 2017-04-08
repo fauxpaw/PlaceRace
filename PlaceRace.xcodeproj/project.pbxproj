@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C0251F01E96B11B0066244A /* CreatePlayAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0251EF1E96B11B0066244A /* CreatePlayAreaViewController.swift */; };
+		4C066F231E998C09004D06A4 /* GameSettingPlayFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C066F221E998C09004D06A4 /* GameSettingPlayFieldTableViewCell.swift */; };
 		4C11D1D21E93D8C6005F7CC4 /* InputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1D11E93D8C6005F7CC4 /* InputValidation.swift */; };
 		4C11D1D41E93EC6B005F7CC4 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1D31E93EC6B005F7CC4 /* SignupViewController.swift */; };
 		4C11D1D71E9433E4005F7CC4 /* TextViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1D61E9433E4005F7CC4 /* TextViewManager.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		4C0251EF1E96B11B0066244A /* CreatePlayAreaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePlayAreaViewController.swift; sourceTree = "<group>"; };
+		4C066F221E998C09004D06A4 /* GameSettingPlayFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingPlayFieldTableViewCell.swift; sourceTree = "<group>"; };
 		4C11D1D11E93D8C6005F7CC4 /* InputValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputValidation.swift; sourceTree = "<group>"; };
 		4C11D1D31E93EC6B005F7CC4 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		4C11D1D61E9433E4005F7CC4 /* TextViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewManager.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				4CE667771E965F5B009135F0 /* GameSettingLocationCountTableViewCell.swift */,
 				4CE667791E965F77009135F0 /* GameSettingTimeLimitTableViewCell.swift */,
 				4CE6677B1E965FA0009135F0 /* GameSettingPowerupsTableViewCell.swift */,
+				4C066F221E998C09004D06A4 /* GameSettingPlayFieldTableViewCell.swift */,
 			);
 			name = "Game Options";
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				4C42876D1E9253E100A5323B /* PlaceRace.xcdatamodeld in Sources */,
 				4C11D1D91E9435D2005F7CC4 /* SignupIssue.swift in Sources */,
 				4CE667761E965F49009135F0 /* GameSettingPlayerCountTableViewCell.swift in Sources */,
+				4C066F231E998C09004D06A4 /* GameSettingPlayFieldTableViewCell.swift in Sources */,
 				4CE667781E965F5B009135F0 /* GameSettingLocationCountTableViewCell.swift in Sources */,
 				4CE6677A1E965F77009135F0 /* GameSettingTimeLimitTableViewCell.swift in Sources */,
 				4C0251F01E96B11B0066244A /* CreatePlayAreaViewController.swift in Sources */,

@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import CoreLocation
 
-class CreateGameViewController: UITableViewController  {
+class CreateGameViewController: UITableViewController, CLLocationManagerDelegate  {
     
+    let locManager = CLLocationManager()
     var publicGame = true
     var desiredNumberOfPlayers: Int = 4
     var desiredNumberOfLocations: Int = 6
     var timelimit = false
     var powerUpsEnabled = true
+    var currentLoc: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: CLLocationDegrees(0), longitude: CLLocationDegrees(0))
+    var playFieldCenter: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: CLLocationDegrees(0), longitude: CLLocationDegrees(0))
+    var playRadius = 1000
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +27,18 @@ class CreateGameViewController: UITableViewController  {
         self.tableView.dataSource = self
         self.tableView.allowsSelection = false
         self.tableView.separatorStyle = .none
+        self.setupLocation()
+    }
+    
+    func setupLocation() {
+        self.locManager.delegate = self
+        self.locManager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        self.currentLoc = locations[0].coordinate
+        self.playFieldCenter = locations[0].coordinate
+        self.locManager.stopUpdatingLocation()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,6 +73,12 @@ class CreateGameViewController: UITableViewController  {
             cell.owningVC = self
             return cell
         }
+            
+        if indexPath.row == 5 {
+            let cell: GameSettingPlayFieldTableViewCell = tableView.dequeueReusableCell(withIdentifier: "playFieldCell", for: indexPath) as! GameSettingPlayFieldTableViewCell
+            cell.owningVC = self
+            return cell
+        }
         else {
             let cell = UITableViewCell(style: .value1, reuseIdentifier: "yourMom")
            return cell
@@ -63,18 +86,27 @@ class CreateGameViewController: UITableViewController  {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 6
     }
     
     @IBAction func nextButtonSelected(_ sender: UIBarButtonItem) {
+        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "specifyPlayfield" {
+            let target = segue.destination as! CreatePlayAreaViewController
+            target.createGameVC = self
         
-        print("Public game = \(publicGame)" )
-        print("#of Players = \(desiredNumberOfPlayers)")
-        print("#of Locations = \(desiredNumberOfLocations)")
-        print("Time limit = \(timelimit)")
-        print("Powerups = \(powerUpsEnabled)")
+        }
         
-        self.performSegue(withIdentifier: "specifyPlayfield", sender: self)
-        
+        if segue.identifier == "toGameLobby" {
+            print("Public game = \(publicGame)" )
+            print("#of Players = \(desiredNumberOfPlayers)")
+            print("#of Locations = \(desiredNumberOfLocations)")
+            print("Time limit = \(timelimit)")
+            print("Powerups = \(powerUpsEnabled)")
+            print("Playfield Center = \(playFieldCenter)")
+            print("Playfield Radius = \(playRadius)")
+        }
     }
 }

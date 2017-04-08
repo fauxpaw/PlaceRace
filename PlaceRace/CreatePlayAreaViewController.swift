@@ -11,29 +11,36 @@ import MapKit
 
 class CreatePlayAreaViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate, CLLocationManagerDelegate {
 
+    var createGameVC: CreateGameViewController?
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var radiusInputField: UITextField!
     let radiusMaxDigitLength = 4
     var radius: Int = 1000 {
         didSet {
             self.newOverlay()
+            self.createGameVC?.playRadius = self.radius
         }
     }
     
     let locationManager = CLLocationManager()
     var managerCanUpdate = false
-    var usersLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: CLLocationDegrees(0), longitude: CLLocationDegrees(0))
+    var usersLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: CLLocationDegrees(0), longitude: CLLocationDegrees(0)) {
+        didSet{
+            self.createGameVC?.currentLoc = self.usersLocation
+        }
+    }
     var currentEpicenter: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: CLLocationDegrees(0), longitude: CLLocationDegrees(0)) {
         didSet {
             self.applyAnnotation()
             self.newOverlay()
+            self.createGameVC?.playFieldCenter = self.currentEpicenter
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
-        
     }
     
     func setup() {
@@ -62,6 +69,7 @@ class CreatePlayAreaViewController: UIViewController, MKMapViewDelegate, UITextF
     func setupLocationManager() {
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
+        locationManager.distanceFilter = 15
         self.toggleLocationUpdate()
     }
     
@@ -76,6 +84,7 @@ class CreatePlayAreaViewController: UIViewController, MKMapViewDelegate, UITextF
             self.managerCanUpdate = false
         } else {
             self.locationManager.startUpdatingLocation()
+            self.locationManager.stopUpdatingHeading()
             self.managerCanUpdate = true
         }
     }
@@ -196,6 +205,7 @@ class CreatePlayAreaViewController: UIViewController, MKMapViewDelegate, UITextF
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("CLmang did up loc")
+        self.usersLocation = locations[0].coordinate
         self.currentEpicenter = locations[0].coordinate
         self.toggleLocationUpdate()
     }
