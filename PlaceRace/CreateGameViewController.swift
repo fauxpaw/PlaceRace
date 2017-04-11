@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import Parse
 
 class CreateGameViewController: UITableViewController, CLLocationManagerDelegate  {
     
@@ -96,10 +97,11 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
         if segue.identifier == "specifyPlayfield" {
             let target = segue.destination as! CreatePlayAreaViewController
             target.createGameVC = self
-        
         }
         
         if segue.identifier == "toGameLobby" {
+            //TODO: Create Game object and send to server
+            
             print("Public game = \(publicGame)" )
             print("#of Players = \(desiredNumberOfPlayers)")
             print("#of Locations = \(desiredNumberOfLocations)")
@@ -107,6 +109,11 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
             print("Powerups = \(powerUpsEnabled)")
             print("Playfield Center = \(playFieldCenter)")
             print("Playfield Radius = \(playRadius)")
+            let target = segue.destination as! GameLobbyViewController
+            target.gameSettings = self
+            if let user = PFUser.current() {
+                target.host = user
+            }
         }
     }
 }

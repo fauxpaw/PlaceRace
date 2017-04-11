@@ -9,11 +9,20 @@
 /* Begin PBXBuildFile section */
 		4C0251F01E96B11B0066244A /* CreatePlayAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0251EF1E96B11B0066244A /* CreatePlayAreaViewController.swift */; };
 		4C066F231E998C09004D06A4 /* GameSettingPlayFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C066F221E998C09004D06A4 /* GameSettingPlayFieldTableViewCell.swift */; };
+		4C066F251E99A328004D06A4 /* GameLobbyPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C066F241E99A328004D06A4 /* GameLobbyPlayerTableViewCell.swift */; };
+		4C066F281E99B6BE004D06A4 /* GameLobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C066F271E99B6BE004D06A4 /* GameLobbyViewController.swift */; };
 		4C11D1D21E93D8C6005F7CC4 /* InputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1D11E93D8C6005F7CC4 /* InputValidation.swift */; };
 		4C11D1D41E93EC6B005F7CC4 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1D31E93EC6B005F7CC4 /* SignupViewController.swift */; };
 		4C11D1D71E9433E4005F7CC4 /* TextViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1D61E9433E4005F7CC4 /* TextViewManager.swift */; };
 		4C11D1D91E9435D2005F7CC4 /* SignupIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1D81E9435D2005F7CC4 /* SignupIssue.swift */; };
 		4C11D1DD1E954999005F7CC4 /* CreateGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D1DC1E954999005F7CC4 /* CreateGameViewController.swift */; };
+		4C21E1E41E9A9A62006F04AE /* LobbyInteractionClearanceLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E1E31E9A9A62006F04AE /* LobbyInteractionClearanceLevel.swift */; };
+		4C21E1E81E9AFCA9006F04AE /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E1E71E9AFCA9006F04AE /* Race.swift */; };
+		4C21E1EA1E9AFCEA006F04AE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E1E91E9AFCEA006F04AE /* Player.swift */; };
+		4C21E1EC1E9B0309006F04AE /* Objective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E1EB1E9B0309006F04AE /* Objective.swift */; };
+		4C21E1EE1E9B0971006F04AE /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E1ED1E9B0971006F04AE /* Route.swift */; };
+		4C21E1F01E9C3CD9006F04AE /* InGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E1EF1E9C3CD9006F04AE /* InGameViewController.swift */; };
+		4C21E1F41E9C3E2E006F04AE /* Minimap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E1F31E9C3E2E006F04AE /* Minimap.swift */; };
 		4C4287651E9253E100A5323B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4287641E9253E100A5323B /* AppDelegate.swift */; };
 		4C4287671E9253E100A5323B /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4287661E9253E100A5323B /* MainMenuViewController.swift */; };
 		4C42876A1E9253E100A5323B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4287681E9253E100A5323B /* Main.storyboard */; };
@@ -33,11 +42,20 @@
 /* Begin PBXFileReference section */
 		4C0251EF1E96B11B0066244A /* CreatePlayAreaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePlayAreaViewController.swift; sourceTree = "<group>"; };
 		4C066F221E998C09004D06A4 /* GameSettingPlayFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingPlayFieldTableViewCell.swift; sourceTree = "<group>"; };
+		4C066F241E99A328004D06A4 /* GameLobbyPlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLobbyPlayerTableViewCell.swift; sourceTree = "<group>"; };
+		4C066F271E99B6BE004D06A4 /* GameLobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLobbyViewController.swift; sourceTree = "<group>"; };
 		4C11D1D11E93D8C6005F7CC4 /* InputValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputValidation.swift; sourceTree = "<group>"; };
 		4C11D1D31E93EC6B005F7CC4 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		4C11D1D61E9433E4005F7CC4 /* TextViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewManager.swift; sourceTree = "<group>"; };
 		4C11D1D81E9435D2005F7CC4 /* SignupIssue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupIssue.swift; sourceTree = "<group>"; };
 		4C11D1DC1E954999005F7CC4 /* CreateGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGameViewController.swift; sourceTree = "<group>"; };
+		4C21E1E31E9A9A62006F04AE /* LobbyInteractionClearanceLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyInteractionClearanceLevel.swift; sourceTree = "<group>"; };
+		4C21E1E71E9AFCA9006F04AE /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		4C21E1E91E9AFCEA006F04AE /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		4C21E1EB1E9B0309006F04AE /* Objective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objective.swift; sourceTree = "<group>"; };
+		4C21E1ED1E9B0971006F04AE /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		4C21E1EF1E9C3CD9006F04AE /* InGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InGameViewController.swift; sourceTree = "<group>"; };
+		4C21E1F31E9C3E2E006F04AE /* Minimap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Minimap.swift; sourceTree = "<group>"; };
 		4C4287611E9253E100A5323B /* PlaceRace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceRace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4287641E9253E100A5323B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4287661E9253E100A5323B /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -77,13 +95,28 @@
 			isa = PBXGroup;
 			children = (
 				4CE667741E965EFC009135F0 /* Game Options */,
+				4C066F261E99A32E004D06A4 /* Game Lobby */,
 			);
 			name = Create;
+			sourceTree = "<group>";
+		};
+		4C066F261E99A32E004D06A4 /* Game Lobby */ = {
+			isa = PBXGroup;
+			children = (
+				4C066F241E99A328004D06A4 /* GameLobbyPlayerTableViewCell.swift */,
+				4C21E1E31E9A9A62006F04AE /* LobbyInteractionClearanceLevel.swift */,
+				4C21E1E71E9AFCA9006F04AE /* Race.swift */,
+				4C21E1E91E9AFCEA006F04AE /* Player.swift */,
+				4C21E1EB1E9B0309006F04AE /* Objective.swift */,
+				4C21E1ED1E9B0971006F04AE /* Route.swift */,
+			);
+			name = "Game Lobby";
 			sourceTree = "<group>";
 		};
 		4C11D1D51E943359005F7CC4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4C21E1F21E9C3D90006F04AE /* Play */,
 				4C6FF24E1E95C9730043E7EA /* Signup */,
 				4C0251F11E96B12B0066244A /* Create */,
 			);
@@ -102,6 +135,22 @@
 			children = (
 			);
 			name = Options;
+			sourceTree = "<group>";
+		};
+		4C21E1F11E9C3CED006F04AE /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				4C21E1EF1E9C3CD9006F04AE /* InGameViewController.swift */,
+			);
+			name = Play;
+			sourceTree = "<group>";
+		};
+		4C21E1F21E9C3D90006F04AE /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				4C21E1F31E9C3E2E006F04AE /* Minimap.swift */,
+			);
+			name = Play;
 			sourceTree = "<group>";
 		};
 		4C4287581E9253E100A5323B = {
@@ -168,6 +217,7 @@
 			children = (
 				4C11D1DC1E954999005F7CC4 /* CreateGameViewController.swift */,
 				4C0251EF1E96B11B0066244A /* CreatePlayAreaViewController.swift */,
+				4C066F271E99B6BE004D06A4 /* GameLobbyViewController.swift */,
 			);
 			name = Create;
 			sourceTree = "<group>";
@@ -182,6 +232,7 @@
 		4C42877F1E9260D300A5323B /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
+				4C21E1F11E9C3CED006F04AE /* Play */,
 				4C6FF24D1E9599880043E7EA /* Menu */,
 				4C11D1DB1E954933005F7CC4 /* Options */,
 				4C11D1DA1E954922005F7CC4 /* Profile */,
@@ -367,21 +418,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C21E1EA1E9AFCEA006F04AE /* Player.swift in Sources */,
 				4C11D1DD1E954999005F7CC4 /* CreateGameViewController.swift in Sources */,
+				4C21E1E81E9AFCA9006F04AE /* Race.swift in Sources */,
 				4CE667731E965EF1009135F0 /* GameSettingPublicTableViewCell.swift in Sources */,
+				4C066F281E99B6BE004D06A4 /* GameLobbyViewController.swift in Sources */,
 				4C11D1D41E93EC6B005F7CC4 /* SignupViewController.swift in Sources */,
 				4CE6677C1E965FA0009135F0 /* GameSettingPowerupsTableViewCell.swift in Sources */,
 				4CE6677E1E966F36009135F0 /* GlobalVars.swift in Sources */,
 				4CABC2D71E9399D300CF8B19 /* LoginViewController.swift in Sources */,
 				4C42876D1E9253E100A5323B /* PlaceRace.xcdatamodeld in Sources */,
+				4C21E1EC1E9B0309006F04AE /* Objective.swift in Sources */,
 				4C11D1D91E9435D2005F7CC4 /* SignupIssue.swift in Sources */,
 				4CE667761E965F49009135F0 /* GameSettingPlayerCountTableViewCell.swift in Sources */,
+				4C21E1F41E9C3E2E006F04AE /* Minimap.swift in Sources */,
 				4C066F231E998C09004D06A4 /* GameSettingPlayFieldTableViewCell.swift in Sources */,
 				4CE667781E965F5B009135F0 /* GameSettingLocationCountTableViewCell.swift in Sources */,
+				4C21E1F01E9C3CD9006F04AE /* InGameViewController.swift in Sources */,
 				4CE6677A1E965F77009135F0 /* GameSettingTimeLimitTableViewCell.swift in Sources */,
 				4C0251F01E96B11B0066244A /* CreatePlayAreaViewController.swift in Sources */,
+				4C066F251E99A328004D06A4 /* GameLobbyPlayerTableViewCell.swift in Sources */,
 				4C11D1D71E9433E4005F7CC4 /* TextViewManager.swift in Sources */,
 				4C4287671E9253E100A5323B /* MainMenuViewController.swift in Sources */,
+				4C21E1E41E9A9A62006F04AE /* LobbyInteractionClearanceLevel.swift in Sources */,
+				4C21E1EE1E9B0971006F04AE /* Route.swift in Sources */,
 				4C11D1D21E93D8C6005F7CC4 /* InputValidation.swift in Sources */,
 				4C4287651E9253E100A5323B /* AppDelegate.swift in Sources */,
 			);
