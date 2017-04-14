@@ -28,7 +28,9 @@ class Minimap: MKMapView {
         self.layer.borderWidth = 2
         self.layer.cornerRadius = 10
         self.layer.borderColor = UIColor.black.cgColor
+        self.userTrackingMode = .followWithHeading
         self.tapGesture()
+        
     }
     
     func drawPlayerPath() {
