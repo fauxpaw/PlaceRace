@@ -11,6 +11,8 @@ import MapKit
 
 class InGameViewController: UIViewController {
     
+    
+    //var places = [Place]()
     @IBOutlet weak var mapView: Gamemap!
     @IBOutlet weak var mini_map: Minimap!
     var lastHeading: CLLocationDirection = CLLocationDirection(integerLiteral: 24)

@@ -11,9 +11,11 @@ import MapKit
 
 class Gamemap: MKMapView {
 
+    var startedLoadingPlaces = false
     var lastKnownHeading: CLLocationDirection = CLLocationDirection(integerLiteral: 24)
     var lastKnownAlt: CLLocationDistance = 50
     var lastKnownUserLoc: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+    var lastLoc : CLLocation = CLLocation()
     let clMang = CLLocationManager()
     var currentObjective = Objective()
     let playerRoute = [Objective]()
@@ -87,9 +89,38 @@ extension Gamemap: CLLocationManagerDelegate {
             if current.altitude > 0 {
                 self.lastKnownAlt = current.altitude + 50
             }
-            
+            self.lastLoc = current
             self.lastKnownUserLoc = current.coordinate
             self.lastKnownHeading = current.course
+        }
+        
+        if !startedLoadingPlaces {
+            startedLoadingPlaces = true
+            let loader = PlacesAPI()
+            
+            loader.getNearbyPlaces(fromEpicenter: self.lastLoc, radius: 1000, handler: { (placesDict, error) in
+                if let dict = placesDict {
+                    //print(dict)
+                    guard let placesArray = dict.object(forKey: "results") as? [NSDictionary] else {return}
+                    for placeDictionary in placesArray {
+                        //pull out the various keys
+                        let lat = placeDictionary.value(forKeyPath: "geometry.location.lat") as! CLLocationDegrees
+                        let long = placeDictionary.value(forKeyPath: "geometry.location.lng") as! CLLocationDegrees
+                        //let reference = placeDictionary.object(forKey: "reference") as! String
+                        let name = placeDictionary.object(forKey: "name") as! String
+                       // let vicinity = placeDictionary.object(forKey: "vicinity") as! String
+                        //let types = placeDictionary.object(forKey: "type") as! NSArray
+                        
+                        let location = CLLocation(latitude: lat, longitude: long)
+                        let annotation = ObjectiveAnnotation(title: name, coordinate: location.coordinate)
+                        DispatchQueue.main.async {
+                            self.addAnnotation(annotation)
+                        }
+                    }
+                    
+                    
+                }
+            })
         }
     }
     
