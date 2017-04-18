@@ -4,12 +4,12 @@
 //
 //  Created by Michael Sweeney on 4/10/17.
 //  Copyright © 2017 Michael Sweeney. All rights reserved.
-//
+
 
 import UIKit
 import MapKit
 
-class InGameViewController: UIViewController, MKMapViewDelegate {
+class InGameViewController: UIViewController {
     
     @IBOutlet weak var mapView: Gamemap!
     @IBOutlet weak var mini_map: Minimap!
@@ -27,15 +27,19 @@ class InGameViewController: UIViewController, MKMapViewDelegate {
         self.mapView.showsUserLocation = true
         //self.mapView.delegate = self
         // Do any additional setup after loading the view.
-        let anno = UserAnnotation(title: "Titlez", subtitle: "subin", coordinate: lastLoc, pinColor: UIColor.purple)
         
-        self.mapView.addAnnotation(anno)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+}
+
+extension InGameViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         print("Mapview going ham?")
@@ -49,7 +53,7 @@ class InGameViewController: UIViewController, MKMapViewDelegate {
         
         if lastAlt == self.mapView.lastKnownAlt && lastLoc.latitude == self.mapView.lastKnownUserLoc.latitude && lastLoc.longitude == self.mapView.lastKnownUserLoc.longitude && lastHeading == self.mapView.lastKnownHeading {return}
         print("Mapview region will change!")
-
+        
         self.mapView.camera.altitude = self.mapView.lastKnownAlt
         self.mapView.camera.centerCoordinate = self.mapView.lastKnownUserLoc
         self.mapView.camera.heading = self.mapView.lastKnownHeading
@@ -90,5 +94,5 @@ class InGameViewController: UIViewController, MKMapViewDelegate {
         
         return nil
     }
-    
+
 }
