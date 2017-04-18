@@ -18,6 +18,7 @@ struct Objective {
     var info: String?
     var category: String?
     var coordinates: CLLocationCoordinate2D?
+    var completed = false
     
     
 }
