@@ -11,6 +11,10 @@ import CoreData
 import Parse
 import ParseUI
 
+//google places api key "AIzaSyCyK0N0v5-vHQ9FrMSpxGorkb42k9QUdQk"
+
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

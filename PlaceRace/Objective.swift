@@ -21,4 +21,8 @@ struct Objective {
     var completed = false
     
     
+    func translateToJSON() {
+        
+    }
+    
 }
