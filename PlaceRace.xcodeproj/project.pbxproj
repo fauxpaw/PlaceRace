@@ -32,6 +32,7 @@
 		4C4287721E9253E100A5323B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4287701E9253E100A5323B /* LaunchScreen.storyboard */; };
 		4C5E5DCF1E9D962100D519B3 /* ObjectiveAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E5DCE1E9D962100D519B3 /* ObjectiveAnnotation.swift */; };
 		4C5E5DD11E9D9B7000D519B3 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E5DD01E9D9B7000D519B3 /* UserAnnotation.swift */; };
+		4CA089341EA5D1B000DFC88A /* PlacesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA089331EA5D1B000DFC88A /* PlacesAPI.swift */; };
 		4CABC2D71E9399D300CF8B19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */; };
 		4CE667731E965EF1009135F0 /* GameSettingPublicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE667721E965EF1009135F0 /* GameSettingPublicTableViewCell.swift */; };
 		4CE667761E965F49009135F0 /* GameSettingPlayerCountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE667751E965F49009135F0 /* GameSettingPlayerCountTableViewCell.swift */; };
@@ -73,6 +74,7 @@
 		4C56DCCC1E92D2E600344232 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "Pods/../build/Debug-iphoneos/ParseUI/ParseUI.framework"; sourceTree = "<group>"; };
 		4C5E5DCE1E9D962100D519B3 /* ObjectiveAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveAnnotation.swift; sourceTree = "<group>"; };
 		4C5E5DD01E9D9B7000D519B3 /* UserAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
+		4CA089331EA5D1B000DFC88A /* PlacesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesAPI.swift; sourceTree = "<group>"; };
 		4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4CE667721E965EF1009135F0 /* GameSettingPublicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingPublicTableViewCell.swift; sourceTree = "<group>"; };
 		4CE667751E965F49009135F0 /* GameSettingPlayerCountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingPlayerCountTableViewCell.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				4C21E1F21E9C3D90006F04AE /* Play */,
 				4C6FF24E1E95C9730043E7EA /* Signup */,
 				4C0251F11E96B12B0066244A /* Create */,
+				4CA089331EA5D1B000DFC88A /* PlacesAPI.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				4C21E1E41E9A9A62006F04AE /* LobbyInteractionClearanceLevel.swift in Sources */,
 				4C21E1EE1E9B0971006F04AE /* Route.swift in Sources */,
 				4C11D1D21E93D8C6005F7CC4 /* InputValidation.swift in Sources */,
+				4CA089341EA5D1B000DFC88A /* PlacesAPI.swift in Sources */,
 				4C4287651E9253E100A5323B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
