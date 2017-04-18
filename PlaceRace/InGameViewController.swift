@@ -36,7 +36,6 @@ class InGameViewController: UIViewController {
     }
     
     
-    
 }
 
 extension InGameViewController: MKMapViewDelegate {
@@ -85,10 +84,9 @@ extension InGameViewController: MKMapViewDelegate {
         
         if mapView == self.mapView {
             if annotation.isEqual(mapView.userLocation)  {
-                let anoView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "user")
-                anoView.pinTintColor = UIColor.purple
+                self.mapView.userPin.pinTintColor = UIColor.orange
                 
-                return anoView
+                return self.mapView.userPin
             }
         }
         

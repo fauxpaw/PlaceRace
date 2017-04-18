@@ -9,15 +9,15 @@
 import UIKit
 import MapKit
 
-class Gamemap: MKMapView, CLLocationManagerDelegate {
+class Gamemap: MKMapView {
 
     var lastKnownHeading: CLLocationDirection = CLLocationDirection(integerLiteral: 24)
     var lastKnownAlt: CLLocationDistance = 50
     var lastKnownUserLoc: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     let clMang = CLLocationManager()
+    var currentObjective = Objective()
     let playerRoute = [Objective]()
     let userPin = MKPinAnnotationView()
-    
     let testObjective = CLLocationCoordinate2D(latitude: 7.748738694980503, longitude: -112.30575994599825)
     
     func setup() {
@@ -31,34 +31,12 @@ class Gamemap: MKMapView, CLLocationManagerDelegate {
         self.clMang.startUpdatingHeading()
         self.clMang.distanceFilter = 5
         self.clMang.headingFilter = 1
-
+        self.currentObjective.coordinates = CLLocationCoordinate2D(latitude: 47.750949, longitude: -122.308644)
         print(self.camera.pitch)
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //set camera altitude
-        self.camera.altitude = self.lastKnownAlt
-        //set camera heading
-        self.camera.heading = self.lastKnownHeading
-        //set camera center
-        self.camera.centerCoordinate = self.lastKnownUserLoc
+    func updateCurrentObjective() {
         
-        self.camera.pitch = 80
-        print("Did update locs")
-        if let current = locations.last {
-            if current.altitude > 0 {
-                self.lastKnownAlt = current.altitude + 50
-            }
-            
-            self.lastKnownUserLoc = current.coordinate
-            self.lastKnownHeading = current.course
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        print("did update heading")
-        self.lastKnownHeading = newHeading.trueHeading
-        self.camera.heading = self.lastKnownHeading
     }
     
     func getAngleToObjective(objective: Objective) -> CLLocationDirection {
@@ -88,5 +66,37 @@ class Gamemap: MKMapView, CLLocationManagerDelegate {
         return input * 180 / M_PI
     }
     
+    func doAllAnoStuff() {
+        
+    }
+}
+
+extension Gamemap: CLLocationManagerDelegate {
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        //set camera altitude
+        self.camera.altitude = self.lastKnownAlt
+        //set camera heading
+        self.camera.heading = self.lastKnownHeading
+        //set camera center
+        self.camera.centerCoordinate = self.lastKnownUserLoc
+        
+        self.camera.pitch = 80
+        print("Did update locs")
+        if let current = locations.last {
+            if current.altitude > 0 {
+                self.lastKnownAlt = current.altitude + 50
+            }
+            
+            self.lastKnownUserLoc = current.coordinate
+            self.lastKnownHeading = current.course
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        print("did update heading")
+        self.lastKnownHeading = newHeading.trueHeading
+        self.camera.heading = self.lastKnownHeading
+    }
+
 }
