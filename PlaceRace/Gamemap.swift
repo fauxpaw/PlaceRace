@@ -11,9 +11,11 @@ import MapKit
 
 class Gamemap: MKMapView {
 
+    var startedLoadingPlaces = false
     var lastKnownHeading: CLLocationDirection = CLLocationDirection(integerLiteral: 24)
     var lastKnownAlt: CLLocationDistance = 50
     var lastKnownUserLoc: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+    var lastLoc : CLLocation = CLLocation()
     let clMang = CLLocationManager()
     var currentObjective = Objective()
     let playerRoute = [Objective]()
@@ -87,10 +89,22 @@ extension Gamemap: CLLocationManagerDelegate {
             if current.altitude > 0 {
                 self.lastKnownAlt = current.altitude + 50
             }
-            
+            self.lastLoc = current
             self.lastKnownUserLoc = current.coordinate
             self.lastKnownHeading = current.course
         }
+        
+        if !startedLoadingPlaces {
+            startedLoadingPlaces = true
+            let loader = PlacesAPI()
+            
+            loader.getNearbyPlaces(fromEpicenter: self.lastLoc, radius: 1000, handler: { (placesDict, error) in
+                if let dict = placesDict {
+                    print(dict)
+                }
+            })
+        }
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
