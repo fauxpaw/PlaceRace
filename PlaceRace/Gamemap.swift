@@ -68,9 +68,6 @@ class Gamemap: MKMapView {
         return input * 180 / M_PI
     }
     
-    func doAllAnoStuff() {
-        
-    }
 }
 
 extension Gamemap: CLLocationManagerDelegate {
@@ -117,8 +114,6 @@ extension Gamemap: CLLocationManagerDelegate {
                             self.addAnnotation(annotation)
                         }
                     }
-                    
-                    
                 }
             })
         }

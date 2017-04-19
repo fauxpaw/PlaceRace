@@ -32,33 +32,28 @@ class InGameViewController: UIViewController {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
 }
 
 extension InGameViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         print("Mapview going ham?")
-        self.mapView.camera.altitude = self.mapView.lastKnownAlt
-        self.mapView.camera.centerCoordinate = self.mapView.lastKnownUserLoc
-        self.mapView.camera.heading = self.mapView.lastKnownHeading
-        self.mapView.camera.pitch = 80
+        //self.mapView.camera.altitude = self.mapView.lastKnownAlt
+        //self.mapView.camera.centerCoordinate = self.mapView.lastKnownUserLoc
+        //self.mapView.camera.heading = self.mapView.lastKnownHeading
+        //self.mapView.camera.pitch = 80
     }
     
     func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
         
         if lastAlt == self.mapView.lastKnownAlt && lastLoc.latitude == self.mapView.lastKnownUserLoc.latitude && lastLoc.longitude == self.mapView.lastKnownUserLoc.longitude && lastHeading == self.mapView.lastKnownHeading {return}
-        print("Mapview region will change!")
-        
-        self.mapView.camera.altitude = self.mapView.lastKnownAlt
-        self.mapView.camera.centerCoordinate = self.mapView.lastKnownUserLoc
-        self.mapView.camera.heading = self.mapView.lastKnownHeading
-        self.mapView.camera.pitch = 80
+        if mapView == self.mapView {
+            print("Mapview region will change!")
+            self.mapView.camera.altitude = self.mapView.lastKnownAlt
+            self.mapView.camera.centerCoordinate = self.mapView.lastKnownUserLoc
+            self.mapView.camera.heading = self.mapView.lastKnownHeading
+            self.mapView.camera.pitch = 80
+        }
     }
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {

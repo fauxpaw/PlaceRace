@@ -11,15 +11,10 @@ import MapKit
 
 class Minimap: MKMapView {
 
+    var defaultSize = CGSize()
+    var defaultCenter = CGPoint()
     var expanded = false
     
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     func setup() {
         self.showsCompass = false
         self.showsTraffic = false
@@ -29,25 +24,23 @@ class Minimap: MKMapView {
         self.layer.cornerRadius = 10
         self.layer.borderColor = UIColor.black.cgColor
         self.userTrackingMode = .followWithHeading
+        self.defaultSize = self.bounds.size
+        self.defaultCenter = self.center
         self.tapGesture()
-        
-    }
-    
-    func drawPlayerPath() {
-        
-    }
-    
-    func syncronize() {
-        
     }
     
     func expand() {
         print("Expanding!")
+        self.defaultSize = self.bounds.size
+        self.bounds.size = CGSize(width: gScreenWidth - 50, height: gScreenHeight - 200)
+        self.center = CGPoint(x: gScreenWidth/2, y: gScreenHeight/2)
         self.expanded = true
     }
     
     func minimize() {
-            print("Collapsing")
+        print("Collapsing")
+        self.bounds.size = self.defaultSize
+        self.center = self.defaultCenter
         self.expanded = false
     }
     
