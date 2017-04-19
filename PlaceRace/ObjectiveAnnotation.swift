@@ -21,5 +21,4 @@ class ObjectiveAnnotation: NSObject, MKAnnotation {
         self.coordinate = coordinate
         super.init()
     }
-    
 }

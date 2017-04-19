@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
 let gMaxPlayersPerGame: Int = 6
 let gMaxLocationsPerGame: Int = 10
+let gScreenHeight = UIScreen.main.bounds.height
+let gScreenWidth = UIScreen.main.bounds.width

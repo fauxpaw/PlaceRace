@@ -37,10 +37,6 @@ class Gamemap: MKMapView {
         print(self.camera.pitch)
     }
     
-    func updateCurrentObjective() {
-        
-    }
-    
     func getAngleToObjective(objective: Objective) -> CLLocationDirection {
         
         let deltaX = (objective.coordinates?.latitude)! - self.lastKnownUserLoc.latitude
@@ -68,9 +64,6 @@ class Gamemap: MKMapView {
         return input * 180 / M_PI
     }
     
-    func doAllAnoStuff() {
-        
-    }
 }
 
 extension Gamemap: CLLocationManagerDelegate {
@@ -117,8 +110,6 @@ extension Gamemap: CLLocationManagerDelegate {
                             self.addAnnotation(annotation)
                         }
                     }
-                    
-                    
                 }
             })
         }
