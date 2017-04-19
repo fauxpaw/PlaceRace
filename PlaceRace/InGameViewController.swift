@@ -11,7 +11,6 @@ import MapKit
 
 class InGameViewController: UIViewController {
     
-    
     //var places = [Place]()
     @IBOutlet weak var mapView: Gamemap!
     @IBOutlet weak var mini_map: Minimap!
@@ -21,7 +20,6 @@ class InGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.mini_map.setup()
         self.mapView.setup()
         self.mini_map.delegate = self
@@ -29,7 +27,6 @@ class InGameViewController: UIViewController {
         self.mapView.showsUserLocation = true
         //self.mapView.delegate = self
         // Do any additional setup after loading the view.
-        
     }
 
 }
