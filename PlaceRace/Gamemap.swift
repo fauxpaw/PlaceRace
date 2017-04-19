@@ -63,7 +63,6 @@ class Gamemap: MKMapView {
     func radiansToDegrees(input: Double) -> Double {
         return input * 180 / M_PI
     }
-    
 }
 
 extension Gamemap: CLLocationManagerDelegate {
