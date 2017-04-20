@@ -19,9 +19,7 @@ struct Objective {
     var coordinates: CLLocationCoordinate2D?
     var completed = false
     
-    init(name: String, imgUrl: String, info: String, category: String, coordinates: CLLocationCoordinate2D) {
-        
-        
-    }
+    /*init(name: String, imgUrl: String, info: String, category: String, coordinates: CLLocationCoordinate2D) {
+    }*/
     
 }
