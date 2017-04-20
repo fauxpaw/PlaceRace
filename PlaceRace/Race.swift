@@ -11,17 +11,20 @@ import Parse
 
 class Race: PFObject {
     
-    /*let creator = PFUser.current()
-    var host: Player
-    var currentPlayers: [Player]
-    var code: Int
+    let creator = PFUser.current()
+    var host = PFUser.current()
+    var currentPlayers: [PFUser]
+    //var code: Int
     var maxPlayers: Int
     var objectives: [Objective]
     var timeLimit: TimeInterval
     
-    override init() {
+    init(playerCount: Int) {
+        
+        self.maxPlayers = playerCount
+        self.currentPlayers = [PFUser.current()!]
+        self.objectives = [Objective]()
+        self.timeLimit = 90
         super.init()
-        self.host = Player()
-        currentPlayers.append(self.host)
-    }*/
+    }
 }
