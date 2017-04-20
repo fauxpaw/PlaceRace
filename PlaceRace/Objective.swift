@@ -12,7 +12,6 @@ import Parse
 
 struct Objective {
     
-    
     var name: String?
     var imgUrl: String?
     var info: String?
@@ -20,8 +19,8 @@ struct Objective {
     var coordinates: CLLocationCoordinate2D?
     var completed = false
     
-    
-    func translateToJSON() {
+    init(name: String, imgUrl: String, info: String, category: String, coordinates: CLLocationCoordinate2D) {
+        
         
     }
     

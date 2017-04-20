@@ -11,6 +11,9 @@ import Foundation
 class ParseBackendController: NSObject {
     
     
+    //Create game
+    
+    
     
     //Save game state
     //Fetch game state
