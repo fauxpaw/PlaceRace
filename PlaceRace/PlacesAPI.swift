@@ -46,5 +46,4 @@ class PlacesAPI {
         }
         dataTask.resume()
     }
-    
 }
