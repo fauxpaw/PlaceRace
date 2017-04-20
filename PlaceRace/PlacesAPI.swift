@@ -9,6 +9,13 @@
 import Foundation
 import CoreLocation
 
+//WORKFLOW: 
+//GET DICTIONARY RESPONSE
+//GRAB ARRAY FROM DICTIONARY
+//EACH ARRAY ITEM IS A DICTIONARY
+//PARSE EACH ARRAY ITEM DICTIONARY INTO A SEPERATE OBJECT
+//STORE OBJECT
+
 class PlacesAPI {
     
     let apiURL = "https://maps.googleapis.com/maps/api/place/"
