@@ -36,7 +36,7 @@ class GameSettingPublicTableViewCell: UITableViewCell {
             }
         }
         else {
-            print("No value for owning VC, ON/OFF toggle fallthroug for \(self)")
+            print("No value for owning VC, ON/OFF toggle fallthrough for \(self)")
         }
     }
   
