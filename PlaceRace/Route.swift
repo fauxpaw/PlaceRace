@@ -16,4 +16,5 @@ struct Route {
     init(objectives: [Objective]) {
         self.objectives = objectives
     }
+    
 }

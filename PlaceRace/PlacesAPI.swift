@@ -42,7 +42,7 @@ class PlacesAPI {
                         guard let responseDict = responseObject as? NSDictionary else {
                             return
                         }
-                        
+                        print("RESPONSEDICTIONARY: \(responseDict)")
                         handler(responseDict, nil)
                         
                     } catch let error as NSError {

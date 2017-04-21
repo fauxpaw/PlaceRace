@@ -18,6 +18,7 @@ class Race: PFObject {
     var maxPlayers: Int
     var objectives: [Objective]
     var timeLimit: TimeInterval
+    //let routes: [String: Any]
     
     init(playerCount: Int) {
         

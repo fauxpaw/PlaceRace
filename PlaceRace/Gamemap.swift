@@ -90,6 +90,7 @@ extension Gamemap: CLLocationManagerDelegate {
             startedLoadingPlaces = true
             let loader = PlacesAPI()
             
+            //MOVE THIS API CALL TO A CONTROLLER
             loader.getNearbyPlaces(fromEpicenter: self.lastLoc, radius: 1000, handler: { (placesDict, error) in
                 if let dict = placesDict {
                     //print(dict)
@@ -106,6 +107,7 @@ extension Gamemap: CLLocationManagerDelegate {
                         let location = CLLocation(latitude: lat, longitude: long)
                         let annotation = ObjectiveAnnotation(title: name, coordinate: location.coordinate)
                         DispatchQueue.main.async {
+                            
                             self.addAnnotation(annotation)
                         }
                     }
