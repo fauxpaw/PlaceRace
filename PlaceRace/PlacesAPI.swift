@@ -9,12 +9,11 @@
 import Foundation
 import CoreLocation
 
-//WORKFLOW: 
-//GET DICTIONARY RESPONSE
-//GRAB ARRAY FROM DICTIONARY
-//EACH ARRAY ITEM IS A DICTIONARY
-//PARSE EACH ARRAY ITEM DICTIONARY INTO A SEPERATE OBJECT
-//STORE OBJECT
+//WORKFLOW: FETCH
+//GET DICTIONARY ROOTOBJECT
+//GET ARRAY OF DICTIONARIES
+//PARSE EACH DICTIONARY INTO A SEPERATE OBJECT
+//STORE OBJECT?
 
 class PlacesAPI {
     
@@ -22,6 +21,8 @@ class PlacesAPI {
     let apiKey = "AIzaSyCyK0N0v5-vHQ9FrMSpxGorkb42k9QUdQk"
     let nearbySearchString = "nearbysearch/json?location="
     
+    //fetch list of places near a specified location
+
     func getNearbyPlaces(fromEpicenter location: CLLocation, radius: Int, handler: @escaping (NSDictionary?, NSError?) -> Void) {
         
         let latitude = location.coordinate.latitude
@@ -46,6 +47,7 @@ class PlacesAPI {
                         handler(responseDict, nil)
                         
                     } catch let error as NSError {
+                        //tell user about error
                         handler(nil, error)
                     }
                 }
@@ -53,4 +55,5 @@ class PlacesAPI {
         }
         dataTask.resume()
     }
+
 }

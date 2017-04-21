@@ -27,7 +27,7 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.allowsSelection = false
-        self.tableView.separatorStyle = .none
+        //self.tableView.separatorStyle = .none
         self.setupLocation()
     }
     
@@ -40,6 +40,13 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
         self.currentLoc = locations[0].coordinate
         self.playFieldCenter = locations[0].coordinate
         self.locManager.stopUpdatingLocation()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 1 || indexPath.row == 2 {
+            return 120
+        }
+        return 90
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -117,3 +124,4 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
         }
     }
 }
+

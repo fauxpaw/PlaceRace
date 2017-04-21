@@ -40,6 +40,7 @@
 		4CE6677C1E965FA0009135F0 /* GameSettingPowerupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6677B1E965FA0009135F0 /* GameSettingPowerupsTableViewCell.swift */; };
 		4CE6677E1E966F36009135F0 /* GlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6677D1E966F36009135F0 /* GlobalVars.swift */; };
 		4CFEEAF91EA995A900EECA8C /* place.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CFEEAF81EA995A900EECA8C /* place.json */; };
+		4CFEEAFB1EA9D2E400EECA8C /* ParseServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFEEAFA1EA9D2E400EECA8C /* ParseServerAPI.swift */; };
 		E53E4D680BD0057835DFE8A1 /* Pods_PlaceRace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6D7C2AF8E56CD5EEE93E00 /* Pods_PlaceRace.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		4CE6677B1E965FA0009135F0 /* GameSettingPowerupsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingPowerupsTableViewCell.swift; sourceTree = "<group>"; };
 		4CE6677D1E966F36009135F0 /* GlobalVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVars.swift; sourceTree = "<group>"; };
 		4CFEEAF81EA995A900EECA8C /* place.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = place.json; sourceTree = "<group>"; };
+		4CFEEAFA1EA9D2E400EECA8C /* ParseServerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseServerAPI.swift; sourceTree = "<group>"; };
 		6BF3C0FF5BBFEA74F2B49E7C /* Pods-PlaceRace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRace.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace.release.xcconfig"; sourceTree = "<group>"; };
 		B74204DA117028ECED921A5E /* Pods-PlaceRace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace.debug.xcconfig"; sourceTree = "<group>"; };
 		EE6D7C2AF8E56CD5EEE93E00 /* Pods_PlaceRace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaceRace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +128,6 @@
 				4C21E1F21E9C3D90006F04AE /* Play */,
 				4C6FF24E1E95C9730043E7EA /* Signup */,
 				4C0251F11E96B12B0066244A /* Create */,
-				4CA089331EA5D1B000DFC88A /* PlacesAPI.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -244,7 +245,7 @@
 		4C42877F1E9260D300A5323B /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
-				4C76C1331EA87AAF0003D945 /* Backend Communication */,
+				4C76C1331EA87AAF0003D945 /* API-Backend Communication */,
 				4C21E1F11E9C3CED006F04AE /* Play */,
 				4C6FF24D1E9599880043E7EA /* Menu */,
 				4C11D1DB1E954933005F7CC4 /* Options */,
@@ -274,11 +275,13 @@
 			name = Signup;
 			sourceTree = "<group>";
 		};
-		4C76C1331EA87AAF0003D945 /* Backend Communication */ = {
+		4C76C1331EA87AAF0003D945 /* API-Backend Communication */ = {
 			isa = PBXGroup;
 			children = (
+				4CA089331EA5D1B000DFC88A /* PlacesAPI.swift */,
+				4CFEEAFA1EA9D2E400EECA8C /* ParseServerAPI.swift */,
 			);
-			name = "Backend Communication";
+			name = "API-Backend Communication";
 			sourceTree = "<group>";
 		};
 		4CE667741E965EFC009135F0 /* Game Options */ = {
@@ -462,6 +465,7 @@
 				4C11D1D91E9435D2005F7CC4 /* SignupIssue.swift in Sources */,
 				4CE667761E965F49009135F0 /* GameSettingPlayerCountTableViewCell.swift in Sources */,
 				4C21E1F41E9C3E2E006F04AE /* Minimap.swift in Sources */,
+				4CFEEAFB1EA9D2E400EECA8C /* ParseServerAPI.swift in Sources */,
 				4C066F231E998C09004D06A4 /* GameSettingPlayFieldTableViewCell.swift in Sources */,
 				4CE667781E965F5B009135F0 /* GameSettingLocationCountTableViewCell.swift in Sources */,
 				4C21E1F01E9C3CD9006F04AE /* InGameViewController.swift in Sources */,
