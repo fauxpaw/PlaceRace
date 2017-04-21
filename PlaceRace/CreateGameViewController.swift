@@ -12,6 +12,7 @@ import Parse
 
 class CreateGameViewController: UITableViewController, CLLocationManagerDelegate  {
     
+    
     let locManager = CLLocationManager()
     var publicGame = true
     var desiredNumberOfPlayers: Int = 4
@@ -116,6 +117,13 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
             print("Powerups = \(powerUpsEnabled)")
             print("Playfield Center = \(playFieldCenter)")
             print("Playfield Radius = \(playRadius)")
+            
+            let factory = PlaceFactory()
+            let lat = CLLocationDegrees(playFieldCenter.latitude)
+            let lng = CLLocationDegrees(playFieldCenter.longitude)
+            let loc = CLLocation(latitude: lat, longitude: lng)
+            _ = factory.createNearbyPlaces(centerPoint: loc, radius: playRadius)
+            
             let target = segue.destination as! GameLobbyViewController
             target.gameSettings = self
             if let user = PFUser.current() {
