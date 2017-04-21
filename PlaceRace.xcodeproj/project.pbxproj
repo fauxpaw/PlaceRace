@@ -34,7 +34,6 @@
 		4C5E5DD11E9D9B7000D519B3 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E5DD01E9D9B7000D519B3 /* UserAnnotation.swift */; };
 		4C76C1321EA87A4A0003D945 /* ParseBackendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76C1311EA87A4A0003D945 /* ParseBackendController.swift */; };
 		4C76C1351EA87D740003D945 /* ServerStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76C1341EA87D740003D945 /* ServerStateManager.swift */; };
-		4C76C1371EA881EC0003D945 /* JSONObjectBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76C1361EA881EC0003D945 /* JSONObjectBuilder.swift */; };
 		4CA089341EA5D1B000DFC88A /* PlacesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA089331EA5D1B000DFC88A /* PlacesAPI.swift */; };
 		4CABC2D71E9399D300CF8B19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */; };
 		4CE667731E965EF1009135F0 /* GameSettingPublicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE667721E965EF1009135F0 /* GameSettingPublicTableViewCell.swift */; };
@@ -79,7 +78,6 @@
 		4C5E5DD01E9D9B7000D519B3 /* UserAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
 		4C76C1311EA87A4A0003D945 /* ParseBackendController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseBackendController.swift; sourceTree = "<group>"; };
 		4C76C1341EA87D740003D945 /* ServerStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerStateManager.swift; sourceTree = "<group>"; };
-		4C76C1361EA881EC0003D945 /* JSONObjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONObjectBuilder.swift; sourceTree = "<group>"; };
 		4CA089331EA5D1B000DFC88A /* PlacesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesAPI.swift; sourceTree = "<group>"; };
 		4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4CE667721E965EF1009135F0 /* GameSettingPublicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingPublicTableViewCell.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				4C6FF24E1E95C9730043E7EA /* Signup */,
 				4C0251F11E96B12B0066244A /* Create */,
 				4CA089331EA5D1B000DFC88A /* PlacesAPI.swift */,
-				4C76C1361EA881EC0003D945 /* JSONObjectBuilder.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -453,7 +450,6 @@
 				4C21E1F61E9C55F0006F04AE /* Gamemap.swift in Sources */,
 				4CE667731E965EF1009135F0 /* GameSettingPublicTableViewCell.swift in Sources */,
 				4C066F281E99B6BE004D06A4 /* GameLobbyViewController.swift in Sources */,
-				4C76C1371EA881EC0003D945 /* JSONObjectBuilder.swift in Sources */,
 				4C76C1351EA87D740003D945 /* ServerStateManager.swift in Sources */,
 				4C11D1D41E93EC6B005F7CC4 /* SignupViewController.swift in Sources */,
 				4CE6677C1E965FA0009135F0 /* GameSettingPowerupsTableViewCell.swift in Sources */,
