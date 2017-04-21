@@ -17,8 +17,8 @@ class Gamemap: MKMapView {
     var lastKnownUserLoc: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var lastLoc : CLLocation = CLLocation()
     let clMang = CLLocationManager()
-    var currentObjective = Objective()
-    let playerRoute = [Objective]()
+    //var currentObjective = Objective()
+    //let playerRoute = [Objective]()
     let userPin = MKPinAnnotationView()
     let testObjective = CLLocationCoordinate2D(latitude: 7.748738694980503, longitude: -112.30575994599825)
     
@@ -33,14 +33,14 @@ class Gamemap: MKMapView {
         self.clMang.startUpdatingHeading()
         self.clMang.distanceFilter = 5
         self.clMang.headingFilter = 1
-        self.currentObjective.coordinates = CLLocationCoordinate2D(latitude: 47.750949, longitude: -122.308644)
+        //self.currentObjective.coordinates = CLLocationCoordinate2D(latitude: 47.750949, longitude: -122.308644)
         print(self.camera.pitch)
     }
     
     func getAngleToObjective(objective: Objective) -> CLLocationDirection {
         
-        let deltaX = (objective.coordinates?.latitude)! - self.lastKnownUserLoc.latitude
-        let deltaY = (objective.coordinates?.longitude)! - self.lastKnownUserLoc.longitude
+        let deltaX = (objective.coordinates.latitude) - self.lastKnownUserLoc.latitude
+        let deltaY = (objective.coordinates.longitude) - self.lastKnownUserLoc.longitude
         let thetaRadians = atan2(deltaY, deltaX)
         
         return CLLocationDirection(exactly: fmod(thetaRadians * 180 / M_PI, 360))!
