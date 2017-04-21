@@ -22,6 +22,7 @@ class PlacesAPI {
     let nearbySearchString = "nearbysearch/json?location="
     
     //fetch list of places near a specified location
+
     func getNearbyPlaces(fromEpicenter location: CLLocation, radius: Int, handler: @escaping (NSDictionary?, NSError?) -> Void) {
         
         let latitude = location.coordinate.latitude
@@ -46,6 +47,7 @@ class PlacesAPI {
                         handler(responseDict, nil)
                         
                     } catch let error as NSError {
+                        //tell user about error
                         handler(nil, error)
                     }
                 }
@@ -53,4 +55,5 @@ class PlacesAPI {
         }
         dataTask.resume()
     }
+
 }
