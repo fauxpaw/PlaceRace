@@ -86,7 +86,7 @@ extension Gamemap: CLLocationManagerDelegate {
             self.lastKnownHeading = current.course
         }
         
-        if !startedLoadingPlaces {
+    /*  if !startedLoadingPlaces {
             startedLoadingPlaces = true
             let loader = PlacesAPI()
             
@@ -113,7 +113,7 @@ extension Gamemap: CLLocationManagerDelegate {
                     }
                 }
             })
-        }
+        } */
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {

@@ -41,8 +41,20 @@
 		4CE6677E1E966F36009135F0 /* GlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6677D1E966F36009135F0 /* GlobalVars.swift */; };
 		4CFEEAF91EA995A900EECA8C /* place.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CFEEAF81EA995A900EECA8C /* place.json */; };
 		4CFEEAFB1EA9D2E400EECA8C /* ParseServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFEEAFA1EA9D2E400EECA8C /* ParseServerAPI.swift */; };
+		4CFEEAFD1EA9E0FD00EECA8C /* PlaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFEEAFC1EA9E0FD00EECA8C /* PlaceFactory.swift */; };
+		4CFEEB101EA9F26200EECA8C /* ObjectiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFEEB0F1EA9F26200EECA8C /* ObjectiveTests.swift */; };
 		E53E4D680BD0057835DFE8A1 /* Pods_PlaceRace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6D7C2AF8E56CD5EEE93E00 /* Pods_PlaceRace.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CFEEB0A1EA9F13700EECA8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C4287591E9253E100A5323B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C4287601E9253E100A5323B;
+			remoteInfo = PlaceRace;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4C0251EF1E96B11B0066244A /* CreatePlayAreaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePlayAreaViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +96,10 @@
 		4CE6677D1E966F36009135F0 /* GlobalVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVars.swift; sourceTree = "<group>"; };
 		4CFEEAF81EA995A900EECA8C /* place.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = place.json; sourceTree = "<group>"; };
 		4CFEEAFA1EA9D2E400EECA8C /* ParseServerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseServerAPI.swift; sourceTree = "<group>"; };
+		4CFEEAFC1EA9E0FD00EECA8C /* PlaceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceFactory.swift; sourceTree = "<group>"; };
+		4CFEEB051EA9F13600EECA8C /* PlaceRaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaceRaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CFEEB091EA9F13700EECA8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CFEEB0F1EA9F26200EECA8C /* ObjectiveTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveTests.swift; sourceTree = "<group>"; };
 		6BF3C0FF5BBFEA74F2B49E7C /* Pods-PlaceRace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRace.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace.release.xcconfig"; sourceTree = "<group>"; };
 		B74204DA117028ECED921A5E /* Pods-PlaceRace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace.debug.xcconfig"; sourceTree = "<group>"; };
 		EE6D7C2AF8E56CD5EEE93E00 /* Pods_PlaceRace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaceRace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +111,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E53E4D680BD0057835DFE8A1 /* Pods_PlaceRace.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CFEEB021EA9F13600EECA8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +148,8 @@
 		4C11D1D51E943359005F7CC4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4CFEEAFA1EA9D2E400EECA8C /* ParseServerAPI.swift */,
+				4CA089331EA5D1B000DFC88A /* PlacesAPI.swift */,
 				4C21E1F21E9C3D90006F04AE /* Play */,
 				4C6FF24E1E95C9730043E7EA /* Signup */,
 				4C0251F11E96B12B0066244A /* Create */,
@@ -169,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				4C4287631E9253E100A5323B /* PlaceRace */,
+				4CFEEB061EA9F13700EECA8C /* PlaceRaceTests */,
 				4C4287621E9253E100A5323B /* Products */,
 				AC2A6D5C71A1A599D819DEBD /* Frameworks */,
 				F2BB6BA63F89EDA717B18D4D /* Pods */,
@@ -179,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				4C4287611E9253E100A5323B /* PlaceRace.app */,
+				4CFEEB051EA9F13600EECA8C /* PlaceRaceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,8 +305,7 @@
 		4C76C1331EA87AAF0003D945 /* API-Backend Communication */ = {
 			isa = PBXGroup;
 			children = (
-				4CA089331EA5D1B000DFC88A /* PlacesAPI.swift */,
-				4CFEEAFA1EA9D2E400EECA8C /* ParseServerAPI.swift */,
+				4CFEEAFC1EA9E0FD00EECA8C /* PlaceFactory.swift */,
 			);
 			name = "API-Backend Communication";
 			sourceTree = "<group>";
@@ -303,6 +329,15 @@
 				4CFEEAF81EA995A900EECA8C /* place.json */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		4CFEEB061EA9F13700EECA8C /* PlaceRaceTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CFEEB091EA9F13700EECA8C /* Info.plist */,
+				4CFEEB0F1EA9F26200EECA8C /* ObjectiveTests.swift */,
+			);
+			path = PlaceRaceTests;
 			sourceTree = "<group>";
 		};
 		AC2A6D5C71A1A599D819DEBD /* Frameworks */ = {
@@ -348,6 +383,24 @@
 			productReference = 4C4287611E9253E100A5323B /* PlaceRace.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4CFEEB041EA9F13600EECA8C /* PlaceRaceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CFEEB0C1EA9F13700EECA8C /* Build configuration list for PBXNativeTarget "PlaceRaceTests" */;
+			buildPhases = (
+				4CFEEB011EA9F13600EECA8C /* Sources */,
+				4CFEEB021EA9F13600EECA8C /* Frameworks */,
+				4CFEEB031EA9F13600EECA8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CFEEB0B1EA9F13700EECA8C /* PBXTargetDependency */,
+			);
+			name = PlaceRaceTests;
+			productName = PlaceRaceTests;
+			productReference = 4CFEEB051EA9F13600EECA8C /* PlaceRaceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -362,6 +415,13 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = NXQBD8W8TS;
 						ProvisioningStyle = Automatic;
+					};
+					4CFEEB041EA9F13600EECA8C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = NXQBD8W8TS;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4C4287601E9253E100A5323B;
 					};
 				};
 			};
@@ -379,6 +439,7 @@
 			projectRoot = "";
 			targets = (
 				4C4287601E9253E100A5323B /* PlaceRace */,
+				4CFEEB041EA9F13600EECA8C /* PlaceRaceTests */,
 			);
 		};
 /* End PBXProject section */
@@ -392,6 +453,13 @@
 				4C42876F1E9253E100A5323B /* Assets.xcassets in Resources */,
 				4C42876A1E9253E100A5323B /* Main.storyboard in Resources */,
 				4CFEEAF91EA995A900EECA8C /* place.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CFEEB031EA9F13600EECA8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +530,7 @@
 				4C42876D1E9253E100A5323B /* PlaceRace.xcdatamodeld in Sources */,
 				4C21E1EC1E9B0309006F04AE /* Objective.swift in Sources */,
 				4C5E5DD11E9D9B7000D519B3 /* UserAnnotation.swift in Sources */,
+				4CFEEAFD1EA9E0FD00EECA8C /* PlaceFactory.swift in Sources */,
 				4C11D1D91E9435D2005F7CC4 /* SignupIssue.swift in Sources */,
 				4CE667761E965F49009135F0 /* GameSettingPlayerCountTableViewCell.swift in Sources */,
 				4C21E1F41E9C3E2E006F04AE /* Minimap.swift in Sources */,
@@ -483,7 +552,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4CFEEB011EA9F13600EECA8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CFEEB101EA9F26200EECA8C /* ObjectiveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CFEEB0B1EA9F13700EECA8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C4287601E9253E100A5323B /* PlaceRace */;
+			targetProxy = 4CFEEB0A1EA9F13700EECA8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4C4287681E9253E100A5323B /* Main.storyboard */ = {
@@ -642,6 +727,37 @@
 			};
 			name = Release;
 		};
+		4CFEEB0D1EA9F13700EECA8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = NXQBD8W8TS;
+				INFOPLIST_FILE = PlaceRaceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sweeney.PlaceRaceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlaceRace.app/PlaceRace";
+			};
+			name = Debug;
+		};
+		4CFEEB0E1EA9F13700EECA8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = NXQBD8W8TS;
+				INFOPLIST_FILE = PlaceRaceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sweeney.PlaceRaceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlaceRace.app/PlaceRace";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -662,6 +778,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4CFEEB0C1EA9F13700EECA8C /* Build configuration list for PBXNativeTarget "PlaceRaceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CFEEB0D1EA9F13700EECA8C /* Debug */,
+				4CFEEB0E1EA9F13700EECA8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
