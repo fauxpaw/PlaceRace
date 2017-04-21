@@ -21,6 +21,7 @@ class PlacesAPI {
     let apiKey = "AIzaSyCyK0N0v5-vHQ9FrMSpxGorkb42k9QUdQk"
     let nearbySearchString = "nearbysearch/json?location="
     
+    //fetch list of places near a specified location
     func getNearbyPlaces(fromEpicenter location: CLLocation, radius: Int, handler: @escaping (NSDictionary?, NSError?) -> Void) {
         
         let latitude = location.coordinate.latitude

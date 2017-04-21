@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P83-Ea-Q3W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P83-Ea-Q3W">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -271,18 +271,18 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zf-uq-4iB">
-                                            <rect key="frame" x="274" y="0.0" width="92" height="69"/>
+                                            <rect key="frame" x="306" y="0.0" width="60" height="77.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="69" id="1fh-da-kt6"/>
-                                                <constraint firstAttribute="width" constant="92" id="RPC-Wp-xC9"/>
+                                                <constraint firstAttribute="width" constant="60" id="RPC-Wp-xC9"/>
                                             </constraints>
                                         </pickerView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ae1-x7-wW5" firstAttribute="centerY" secondItem="bKN-hh-qd5" secondAttribute="centerY" id="BLY-3g-Stn"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="1zf-uq-4iB" secondAttribute="trailing" constant="1" id="FOA-sc-4Qq"/>
-                                        <constraint firstItem="1zf-uq-4iB" firstAttribute="centerY" secondItem="bKN-hh-qd5" secondAttribute="centerY" constant="-4" id="Frn-Oa-Jn7"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="ae1-x7-wW5" secondAttribute="leading" id="IvD-FC-Gof"/>
+                                        <constraint firstItem="1zf-uq-4iB" firstAttribute="centerY" secondItem="bKN-hh-qd5" secondAttribute="centerY" id="O4f-Zj-tn2"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1zf-uq-4iB" secondAttribute="trailing" constant="1" id="ZFS-hr-259"/>
+                                        <constraint firstItem="1zf-uq-4iB" firstAttribute="top" secondItem="bKN-hh-qd5" secondAttribute="topMargin" constant="-8" id="cbG-Lm-zsC"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -297,26 +297,32 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="77.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onw-xj-aSu">
-                                            <rect key="frame" x="8" y="20" width="150" height="36"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onw-xj-aSu">
+                                            <rect key="frame" x="8" y="28" width="155" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbX-Ge-aWz">
-                                            <rect key="frame" x="275" y="4" width="92" height="69"/>
+                                            <rect key="frame" x="307" y="4" width="60" height="69"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="69" id="1uT-gH-4w0"/>
-                                                <constraint firstAttribute="width" constant="92" id="bmC-G4-7gN"/>
+                                                <constraint firstAttribute="width" constant="60" id="bmC-G4-7gN"/>
                                             </constraints>
                                         </pickerView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="vbX-Ge-aWz" secondAttribute="trailing" id="Irx-0I-rEy"/>
+                                        <constraint firstItem="onw-xj-aSu" firstAttribute="centerY" secondItem="qTK-7N-ATS" secondAttribute="centerY" id="V2I-fh-EGt"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="onw-xj-aSu" secondAttribute="leading" id="rQ9-47-0wN"/>
                                         <constraint firstItem="vbX-Ge-aWz" firstAttribute="centerY" secondItem="qTK-7N-ATS" secondAttribute="centerY" id="tP8-rg-EHL"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vbX-Ge-aWz" secondAttribute="trailing" constant="8" id="2Bt-Q5-qwq"/>
+                                    <constraint firstAttribute="bottom" secondItem="vbX-Ge-aWz" secondAttribute="bottom" constant="5" id="6Yu-9p-wcU"/>
+                                    <constraint firstItem="vbX-Ge-aWz" firstAttribute="top" secondItem="84d-pX-tOs" secondAttribute="top" constant="4" id="NF9-1M-Fu0"/>
+                                    <constraint firstItem="vbX-Ge-aWz" firstAttribute="centerY" secondItem="84d-pX-tOs" secondAttribute="centerY" id="ke3-0Q-hwt"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="cellText" destination="onw-xj-aSu" id="rLF-92-HMQ"/>
                                     <outlet property="pickerView" destination="vbX-Ge-aWz" id="Ab1-nL-A4V"/>

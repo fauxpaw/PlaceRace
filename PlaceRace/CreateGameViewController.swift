@@ -44,9 +44,9 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 1 || indexPath.row == 2 {
-            return 150
+            return 120
         }
-        return 100
+        return 90
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
