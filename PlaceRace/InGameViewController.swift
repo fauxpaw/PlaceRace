@@ -34,7 +34,7 @@ class InGameViewController: UIViewController {
 extension InGameViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        print("Mapview going ham?")
+        //print("Mapview going ham?")
         //self.mapView.camera.altitude = self.mapView.lastKnownAlt
         //self.mapView.camera.centerCoordinate = self.mapView.lastKnownUserLoc
         //self.mapView.camera.heading = self.mapView.lastKnownHeading
@@ -45,7 +45,7 @@ extension InGameViewController: MKMapViewDelegate {
         
         if lastAlt == self.mapView.lastKnownAlt && lastLoc.latitude == self.mapView.lastKnownUserLoc.latitude && lastLoc.longitude == self.mapView.lastKnownUserLoc.longitude && lastHeading == self.mapView.lastKnownHeading {return}
         if mapView == self.mapView {
-            print("Mapview region will change!")
+            //print("Mapview region will change!")
             self.mapView.camera.altitude = self.mapView.lastKnownAlt
             self.mapView.camera.centerCoordinate = self.mapView.lastKnownUserLoc
             self.mapView.camera.heading = self.mapView.lastKnownHeading
@@ -58,19 +58,19 @@ extension InGameViewController: MKMapViewDelegate {
     }
     
     func mapViewWillStartRenderingMap(_ mapView: MKMapView) {
-        print("Mapview rendering!")
+        //print("Mapview rendering!")
     }
     
     func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
-        print("map loaded!")
+        //print("map loaded!")
     }
     
     func mapViewWillStartLoadingMap(_ mapView: MKMapView) {
-        print("map soon to load")
+        //print("map soon to load")
     }
     
     func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
-        print("did finish rendering map!")
+        //print("did finish rendering map!")
         
     }
     
