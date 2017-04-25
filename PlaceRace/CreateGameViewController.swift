@@ -122,7 +122,9 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
             let lat = CLLocationDegrees(playFieldCenter.latitude)
             let lng = CLLocationDegrees(playFieldCenter.longitude)
             let loc = CLLocation(latitude: lat, longitude: lng)
-            _ = factory.createNearbyPlaces(centerPoint: loc, radius: playRadius)
+            factory.createNearbyPlaces(centerPoint: loc, radius: playRadius, handler: { (places) in
+                print(places)
+            })
             
             let target = segue.destination as! GameLobbyViewController
             target.gameSettings = self

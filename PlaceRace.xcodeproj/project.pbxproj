@@ -31,7 +31,6 @@
 		4C4287721E9253E100A5323B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4287701E9253E100A5323B /* LaunchScreen.storyboard */; };
 		4C5E5DCF1E9D962100D519B3 /* ObjectiveAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E5DCE1E9D962100D519B3 /* ObjectiveAnnotation.swift */; };
 		4C5E5DD11E9D9B7000D519B3 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E5DD01E9D9B7000D519B3 /* UserAnnotation.swift */; };
-		4C9D17BF1EAF257200BA9443 /* PlacesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D17BE1EAF257200BA9443 /* PlacesAPITests.swift */; };
 		4C9D17C11EAF269700BA9443 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D17C01EAF269700BA9443 /* JSONParser.swift */; };
 		4CA089341EA5D1B000DFC88A /* PlacesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA089331EA5D1B000DFC88A /* PlacesAPI.swift */; };
 		4CABC2D71E9399D300CF8B19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */; };
@@ -87,7 +86,6 @@
 		4C56DCCC1E92D2E600344232 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "Pods/../build/Debug-iphoneos/ParseUI/ParseUI.framework"; sourceTree = "<group>"; };
 		4C5E5DCE1E9D962100D519B3 /* ObjectiveAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveAnnotation.swift; sourceTree = "<group>"; };
 		4C5E5DD01E9D9B7000D519B3 /* UserAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
-		4C9D17BE1EAF257200BA9443 /* PlacesAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesAPITests.swift; sourceTree = "<group>"; };
 		4C9D17C01EAF269700BA9443 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		4CA089331EA5D1B000DFC88A /* PlacesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesAPI.swift; sourceTree = "<group>"; };
 		4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -343,7 +341,6 @@
 			children = (
 				4CFEEB091EA9F13700EECA8C /* Info.plist */,
 				4CFEEB0F1EA9F26200EECA8C /* ObjectiveTests.swift */,
-				4C9D17BE1EAF257200BA9443 /* PlacesAPITests.swift */,
 			);
 			path = PlaceRaceTests;
 			sourceTree = "<group>";
@@ -615,7 +612,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C9D17BF1EAF257200BA9443 /* PlacesAPITests.swift in Sources */,
 				4CFEEB101EA9F26200EECA8C /* ObjectiveTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-//WORKFLOW: FETCH
+//FETCHING WORKFLOW:
 //GET DICTIONARY ROOTOBJECT
 //GET ARRAY OF DICTIONARIES
 //PARSE EACH DICTIONARY INTO A SEPERATE OBJECT
@@ -23,7 +23,7 @@ class PlacesAPI {
     
     //fetch list of places near a specified location
 
-    func getNearbyPlaces(fromEpicenter location: CLLocation, radius: Int, handler: @escaping (NSDictionary?, NSError?) -> Void) {
+    func getPlaces(nearLocation location: CLLocation, radius: Int, handler: @escaping (NSDictionary?, NSError?) -> Void) {
         
         let latitude = location.coordinate.latitude
         let longitude = location.coordinate.longitude
@@ -37,7 +37,6 @@ class PlacesAPI {
             } else if let httpResponse = response as? HTTPURLResponse {
                 //switch on response codes????
                 if httpResponse.statusCode == 200 {
-                    print(data!)
                     
                     //remove this responsibility to jsonparser
                     do {

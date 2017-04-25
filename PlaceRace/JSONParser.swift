@@ -27,14 +27,10 @@ class JSONParser {
     func objectiveRootToArrayOfDict(rootObj: [String: Any], key: String) -> [[String: Any]]? {
         
         guard let array : [[String: Any]] = rootObj[key] as? [[String: Any]] else { return nil }
-     
-    
     }
     
     func arrayOfDictToSingleDict(arrOfDict: [[String: Any]]) -> [String: Any] {
-        
-        
-        
+     
     }
     */
     
