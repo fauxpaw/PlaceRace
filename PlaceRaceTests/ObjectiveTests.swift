@@ -41,5 +41,11 @@ class ObjectiveTests: XCTestCase {
         }
     }
     
+    func testValidArrayOfDictionaries() {
+        
+        
+        
+    }
+    
     
 }
