@@ -43,9 +43,53 @@ class ObjectiveTests: XCTestCase {
     
     func testValidArrayOfDictionaries() {
         
+        do {
+            if let rootObject = try JSONSerialization.jsonObject(with: myData, options: .mutableContainers) as? [String: Any] {
+                let array = rootObject["results"] as? [[String: Any]]
+                XCTAssertNotNil(array)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func testValidSingleDictionaries() {
         
+        do {
+            if let rootObject = try JSONSerialization.jsonObject(with: myData, options: .mutableContainers) as? [String: Any] {
+                if let array = rootObject["results"] as? [[String: Any]] {
+                    
+                    for dict in array {
+                        let obj = dict as [String: Any]
+                        XCTAssertNotNil(obj)
+                    }
+                }
+                
+                
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
         
     }
     
+    func testModelObjectCreation() {
+        
+        do {
+            if let rootObject = try JSONSerialization.jsonObject(with: myData, options: .mutableContainers) as? [String: Any] {
+                if let array = rootObject["results"] as? [[String: Any]] {
+                    
+                    for dict in array {
+                        if let modelObj = Objective(json: dict) {
+                            modelObj.description()
+                            XCTAssertNotNil(modelObj)
+                        }
+                    }
+                }
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
     
 }

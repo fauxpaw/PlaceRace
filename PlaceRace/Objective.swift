@@ -17,7 +17,7 @@ class Objective {
     //var info: String?
     //var category: String?
     var coordinates: CLLocationCoordinate2D
-    var completed : Bool?
+    var completed : Bool
     
     /*init(name: String, imgUrl: String, info: String, category: String, coordinates: CLLocationCoordinate2D) {
     }*/
@@ -32,9 +32,14 @@ class Objective {
             self.coordinates = loc
             self.completed = false
             self.name = locName
+            self.completed = false
         } else {
             print("could not instantiate objective. An 'if let' failed")
             return nil
         }
+    }
+    
+    func description() {
+        print("My place name is: \(self.name), whose coords are \(self.coordinates) and status is \(self.completed). ")
     }
 }
