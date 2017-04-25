@@ -30,6 +30,7 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
         self.tableView.allowsSelection = false
         //self.tableView.separatorStyle = .none
         self.setupLocation()
+        
     }
     
     func setupLocation() {
@@ -123,7 +124,9 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
             let lng = CLLocationDegrees(playFieldCenter.longitude)
             let loc = CLLocation(latitude: lat, longitude: lng)
             factory.createNearbyPlaces(centerPoint: loc, radius: playRadius, handler: { (places) in
-                print(places)
+                if let first = places.first {
+                    first.description()
+                }
             })
             
             let target = segue.destination as! GameLobbyViewController

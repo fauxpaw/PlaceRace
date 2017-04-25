@@ -39,5 +39,8 @@ class PlaceFactory {
         }
     }
     
+    func createPlacesFromArrayOfDictionaries() {
+        
+    }
 
 }

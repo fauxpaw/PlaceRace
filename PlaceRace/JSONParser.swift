@@ -10,7 +10,7 @@ import Foundation
 
 class JSONParser {
     
-    func dataToObjectiveRootObject(data: Data) -> [String: Any]? {
+    func dataToDictionaryRootObject(data: Data) -> [String: Any]? {
         
         do {
             if let rootObject = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
@@ -23,12 +23,17 @@ class JSONParser {
         return nil
     }
    
-    /*
-    func objectiveRootToArrayOfDict(rootObj: [String: Any], key: String) -> [[String: Any]]? {
+    
+    func dictionaryRootToArrayOfDict(rootObj: [String: Any], key: String) -> [[String: Any]]? {
         
-        guard let array : [[String: Any]] = rootObj[key] as? [[String: Any]] else { return nil }
+        let array : [[String: Any]] = rootObj[key] as! [[String: Any]]
+        return array
+        
     }
     
+    
+    
+    /*
     func arrayOfDictToSingleDict(arrOfDict: [[String: Any]]) -> [String: Any] {
      
     }

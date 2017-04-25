@@ -40,6 +40,7 @@
 		4CE6677A1E965F77009135F0 /* GameSettingTimeLimitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE667791E965F77009135F0 /* GameSettingTimeLimitTableViewCell.swift */; };
 		4CE6677C1E965FA0009135F0 /* GameSettingPowerupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6677B1E965FA0009135F0 /* GameSettingPowerupsTableViewCell.swift */; };
 		4CE6677E1E966F36009135F0 /* GlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6677D1E966F36009135F0 /* GlobalVars.swift */; };
+		4CF437F81EAF3ED800E185D2 /* ObjectiveFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF437F71EAF3ED800E185D2 /* ObjectiveFactory.swift */; };
 		4CFEEAF91EA995A900EECA8C /* place.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CFEEAF81EA995A900EECA8C /* place.json */; };
 		4CFEEAFB1EA9D2E400EECA8C /* ParseServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFEEAFA1EA9D2E400EECA8C /* ParseServerAPI.swift */; };
 		4CFEEAFD1EA9E0FD00EECA8C /* PlaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFEEAFC1EA9E0FD00EECA8C /* PlaceFactory.swift */; };
@@ -95,6 +96,7 @@
 		4CE667791E965F77009135F0 /* GameSettingTimeLimitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingTimeLimitTableViewCell.swift; sourceTree = "<group>"; };
 		4CE6677B1E965FA0009135F0 /* GameSettingPowerupsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingPowerupsTableViewCell.swift; sourceTree = "<group>"; };
 		4CE6677D1E966F36009135F0 /* GlobalVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVars.swift; sourceTree = "<group>"; };
+		4CF437F71EAF3ED800E185D2 /* ObjectiveFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveFactory.swift; sourceTree = "<group>"; };
 		4CFEEAF81EA995A900EECA8C /* place.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = place.json; sourceTree = "<group>"; };
 		4CFEEAFA1EA9D2E400EECA8C /* ParseServerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseServerAPI.swift; sourceTree = "<group>"; };
 		4CFEEAFC1EA9E0FD00EECA8C /* PlaceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceFactory.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				4C21E1E31E9A9A62006F04AE /* LobbyInteractionClearanceLevel.swift */,
 				4C21E1E71E9AFCA9006F04AE /* Race.swift */,
 				4C21E1EB1E9B0309006F04AE /* Objective.swift */,
+				4CF437F71EAF3ED800E185D2 /* ObjectiveFactory.swift */,
 			);
 			name = "Game Lobby";
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				4C21E1E81E9AFCA9006F04AE /* Race.swift in Sources */,
 				4C9D17C11EAF269700BA9443 /* JSONParser.swift in Sources */,
 				4C21E1F61E9C55F0006F04AE /* Gamemap.swift in Sources */,
+				4CF437F81EAF3ED800E185D2 /* ObjectiveFactory.swift in Sources */,
 				4CE667731E965EF1009135F0 /* GameSettingPublicTableViewCell.swift in Sources */,
 				4C066F281E99B6BE004D06A4 /* GameLobbyViewController.swift in Sources */,
 				4C11D1D41E93EC6B005F7CC4 /* SignupViewController.swift in Sources */,
