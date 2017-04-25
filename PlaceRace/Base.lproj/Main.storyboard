@@ -271,7 +271,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zf-uq-4iB">
-                                            <rect key="frame" x="306" y="0.0" width="60" height="77.5"/>
+                                            <rect key="frame" x="306" y="13" width="60" height="51.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="RPC-Wp-xC9"/>
                                             </constraints>
@@ -279,10 +279,11 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ae1-x7-wW5" firstAttribute="centerY" secondItem="bKN-hh-qd5" secondAttribute="centerY" id="BLY-3g-Stn"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1zf-uq-4iB" secondAttribute="bottom" constant="5" id="GdZ-kw-oH8"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="ae1-x7-wW5" secondAttribute="leading" id="IvD-FC-Gof"/>
                                         <constraint firstItem="1zf-uq-4iB" firstAttribute="centerY" secondItem="bKN-hh-qd5" secondAttribute="centerY" id="O4f-Zj-tn2"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="1zf-uq-4iB" secondAttribute="trailing" constant="1" id="ZFS-hr-259"/>
-                                        <constraint firstItem="1zf-uq-4iB" firstAttribute="top" secondItem="bKN-hh-qd5" secondAttribute="topMargin" constant="-8" id="cbG-Lm-zsC"/>
+                                        <constraint firstItem="1zf-uq-4iB" firstAttribute="top" secondItem="bKN-hh-qd5" secondAttribute="topMargin" constant="5" id="cbG-Lm-zsC"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -304,24 +305,21 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbX-Ge-aWz">
-                                            <rect key="frame" x="307" y="4" width="60" height="69"/>
+                                            <rect key="frame" x="307" y="13" width="60" height="51.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="bmC-G4-7gN"/>
                                             </constraints>
                                         </pickerView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="vbX-Ge-aWz" secondAttribute="trailing" id="Irx-0I-rEy"/>
+                                        <constraint firstItem="vbX-Ge-aWz" firstAttribute="top" secondItem="qTK-7N-ATS" secondAttribute="topMargin" constant="5" id="7Dd-A7-iXw"/>
                                         <constraint firstItem="onw-xj-aSu" firstAttribute="centerY" secondItem="qTK-7N-ATS" secondAttribute="centerY" id="V2I-fh-EGt"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="vbX-Ge-aWz" secondAttribute="bottom" constant="5" id="buZ-qm-31Q"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="onw-xj-aSu" secondAttribute="leading" id="rQ9-47-0wN"/>
-                                        <constraint firstItem="vbX-Ge-aWz" firstAttribute="centerY" secondItem="qTK-7N-ATS" secondAttribute="centerY" id="tP8-rg-EHL"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="vbX-Ge-aWz" secondAttribute="trailing" constant="8" id="2Bt-Q5-qwq"/>
-                                    <constraint firstAttribute="bottom" secondItem="vbX-Ge-aWz" secondAttribute="bottom" constant="5" id="6Yu-9p-wcU"/>
-                                    <constraint firstItem="vbX-Ge-aWz" firstAttribute="top" secondItem="84d-pX-tOs" secondAttribute="top" constant="4" id="NF9-1M-Fu0"/>
-                                    <constraint firstItem="vbX-Ge-aWz" firstAttribute="centerY" secondItem="84d-pX-tOs" secondAttribute="centerY" id="ke3-0Q-hwt"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="cellText" destination="onw-xj-aSu" id="rLF-92-HMQ"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		189C172CC5668B92CB037A5A /* Pods_PlaceRaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6EB81B6FC377B55AEF9FC7 /* Pods_PlaceRaceTests.framework */; };
 		4C0251F01E96B11B0066244A /* CreatePlayAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0251EF1E96B11B0066244A /* CreatePlayAreaViewController.swift */; };
 		4C066F231E998C09004D06A4 /* GameSettingPlayFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C066F221E998C09004D06A4 /* GameSettingPlayFieldTableViewCell.swift */; };
 		4C066F251E99A328004D06A4 /* GameLobbyPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C066F241E99A328004D06A4 /* GameLobbyPlayerTableViewCell.swift */; };
@@ -19,7 +20,6 @@
 		4C21E1E41E9A9A62006F04AE /* LobbyInteractionClearanceLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E1E31E9A9A62006F04AE /* LobbyInteractionClearanceLevel.swift */; };
 		4C21E1E81E9AFCA9006F04AE /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E1E71E9AFCA9006F04AE /* Race.swift */; };
 		4C21E1EC1E9B0309006F04AE /* Objective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E1EB1E9B0309006F04AE /* Objective.swift */; };
-		4C21E1EE1E9B0971006F04AE /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E1ED1E9B0971006F04AE /* Route.swift */; };
 		4C21E1F01E9C3CD9006F04AE /* InGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E1EF1E9C3CD9006F04AE /* InGameViewController.swift */; };
 		4C21E1F41E9C3E2E006F04AE /* Minimap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E1F31E9C3E2E006F04AE /* Minimap.swift */; };
 		4C21E1F61E9C55F0006F04AE /* Gamemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E1F51E9C55F0006F04AE /* Gamemap.swift */; };
@@ -69,7 +69,6 @@
 		4C21E1E31E9A9A62006F04AE /* LobbyInteractionClearanceLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyInteractionClearanceLevel.swift; sourceTree = "<group>"; };
 		4C21E1E71E9AFCA9006F04AE /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
 		4C21E1EB1E9B0309006F04AE /* Objective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objective.swift; sourceTree = "<group>"; };
-		4C21E1ED1E9B0971006F04AE /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		4C21E1EF1E9C3CD9006F04AE /* InGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InGameViewController.swift; sourceTree = "<group>"; };
 		4C21E1F31E9C3E2E006F04AE /* Minimap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Minimap.swift; sourceTree = "<group>"; };
 		4C21E1F51E9C55F0006F04AE /* Gamemap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gamemap.swift; sourceTree = "<group>"; };
@@ -100,8 +99,11 @@
 		4CFEEB051EA9F13600EECA8C /* PlaceRaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaceRaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFEEB091EA9F13700EECA8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CFEEB0F1EA9F26200EECA8C /* ObjectiveTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveTests.swift; sourceTree = "<group>"; };
+		65787FD30CDB4D3AF3C860A0 /* Pods-PlaceRaceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRaceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRaceTests/Pods-PlaceRaceTests.release.xcconfig"; sourceTree = "<group>"; };
 		6BF3C0FF5BBFEA74F2B49E7C /* Pods-PlaceRace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRace.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace.release.xcconfig"; sourceTree = "<group>"; };
+		8448B69CA910745F7F79CBB0 /* Pods-PlaceRaceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRaceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRaceTests/Pods-PlaceRaceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B74204DA117028ECED921A5E /* Pods-PlaceRace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace.debug.xcconfig"; sourceTree = "<group>"; };
+		CE6EB81B6FC377B55AEF9FC7 /* Pods_PlaceRaceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaceRaceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6D7C2AF8E56CD5EEE93E00 /* Pods_PlaceRace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaceRace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189C172CC5668B92CB037A5A /* Pods_PlaceRaceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +143,6 @@
 				4C21E1E31E9A9A62006F04AE /* LobbyInteractionClearanceLevel.swift */,
 				4C21E1E71E9AFCA9006F04AE /* Race.swift */,
 				4C21E1EB1E9B0309006F04AE /* Objective.swift */,
-				4C21E1ED1E9B0971006F04AE /* Route.swift */,
 			);
 			name = "Game Lobby";
 			sourceTree = "<group>";
@@ -347,6 +349,7 @@
 				4C56DCCB1E92D2E600344232 /* Parse.framework */,
 				4C56DCCC1E92D2E600344232 /* ParseUI.framework */,
 				EE6D7C2AF8E56CD5EEE93E00 /* Pods_PlaceRace.framework */,
+				CE6EB81B6FC377B55AEF9FC7 /* Pods_PlaceRaceTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -356,6 +359,8 @@
 			children = (
 				B74204DA117028ECED921A5E /* Pods-PlaceRace.debug.xcconfig */,
 				6BF3C0FF5BBFEA74F2B49E7C /* Pods-PlaceRace.release.xcconfig */,
+				8448B69CA910745F7F79CBB0 /* Pods-PlaceRaceTests.debug.xcconfig */,
+				65787FD30CDB4D3AF3C860A0 /* Pods-PlaceRaceTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -387,9 +392,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CFEEB0C1EA9F13700EECA8C /* Build configuration list for PBXNativeTarget "PlaceRaceTests" */;
 			buildPhases = (
+				B1FF6725AF3C4D29942ED725 /* [CP] Check Pods Manifest.lock */,
 				4CFEEB011EA9F13600EECA8C /* Sources */,
 				4CFEEB021EA9F13600EECA8C /* Frameworks */,
 				4CFEEB031EA9F13600EECA8C /* Resources */,
+				483699E1F4C72F2E0D8507E6 /* [CP] Embed Pods Frameworks */,
+				1B6EE7A2B7C5B3231265E762 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -481,6 +489,51 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1B6EE7A2B7C5B3231265E762 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceRaceTests/Pods-PlaceRaceTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		483699E1F4C72F2E0D8507E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceRaceTests/Pods-PlaceRaceTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1FF6725AF3C4D29942ED725 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		D83D1B4794260A550FDB4861 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -545,7 +598,6 @@
 				4C11D1D71E9433E4005F7CC4 /* TextViewManager.swift in Sources */,
 				4C4287671E9253E100A5323B /* MainMenuViewController.swift in Sources */,
 				4C21E1E41E9A9A62006F04AE /* LobbyInteractionClearanceLevel.swift in Sources */,
-				4C21E1EE1E9B0971006F04AE /* Route.swift in Sources */,
 				4C11D1D21E93D8C6005F7CC4 /* InputValidation.swift in Sources */,
 				4CA089341EA5D1B000DFC88A /* PlacesAPI.swift in Sources */,
 				4C4287651E9253E100A5323B /* AppDelegate.swift in Sources */,
@@ -729,6 +781,7 @@
 		};
 		4CFEEB0D1EA9F13700EECA8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8448B69CA910745F7F79CBB0 /* Pods-PlaceRaceTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -745,6 +798,7 @@
 		};
 		4CFEEB0E1EA9F13700EECA8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65787FD30CDB4D3AF3C860A0 /* Pods-PlaceRaceTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -786,6 +840,7 @@
 				4CFEEB0E1EA9F13700EECA8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
