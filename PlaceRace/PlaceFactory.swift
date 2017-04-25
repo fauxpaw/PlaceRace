@@ -13,17 +13,17 @@ class PlaceFactory {
     
     //singleton?
     var loadingInProgress = false
-    typealias CreatePlacesCallback = (Bool, [Objective]?)->()
+    typealias completionHandler = ([Objective])->()
     
-    func createNearbyPlaces(centerPoint: CLLocation, radius: Int) {
+    func createNearbyPlaces(centerPoint: CLLocation, radius: Int, handler: @escaping completionHandler) {
         
-        var places = [Objective]()
+        var places = [Objective]() 
         
         if !loadingInProgress {
             loadingInProgress = true
             let loader = PlacesAPI()
             
-            loader.getNearbyPlaces(fromEpicenter: centerPoint, radius: radius, handler: { (placesDict, error) in
+            loader.getPlaces(nearLocation: centerPoint, radius: radius, handler: { (placesDict, error) in
                 if let dict = placesDict {
                     //print(dict)
                     guard let placesArray = dict.object(forKey: "results") as? [[String:Any]] else {return}
@@ -33,6 +33,7 @@ class PlaceFactory {
                             places.append(place)
                         }
                     }
+                    handler(places)
                 }
             })
         }
