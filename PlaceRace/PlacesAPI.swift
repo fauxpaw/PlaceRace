@@ -33,11 +33,13 @@ class PlacesAPI {
         let urlSession = URLSession(configuration: .default)
         let dataTask = urlSession.dataTask(with: url) { data, response, error in
             if let error = error {
-                print(error)
+                print(error.localizedDescription)
             } else if let httpResponse = response as? HTTPURLResponse {
+                //switch on response codes????
                 if httpResponse.statusCode == 200 {
                     print(data!)
                     
+                    //remove this responsibility to jsonparser
                     do {
                         let responseObject = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
                         guard let responseDict = responseObject as? NSDictionary else {

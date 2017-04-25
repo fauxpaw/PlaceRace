@@ -8,5 +8,9 @@ target 'PlaceRace' do
   # Pods for PlaceRace
   pod 'Parse'
   pod 'ParseUI'
-
+  
+  target 'PlaceRaceTests' do
+      inherit! :search_paths
+      end
 end
+
