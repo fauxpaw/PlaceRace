@@ -40,4 +40,12 @@ class ObjectiveTests: XCTestCase {
            print(error.localizedDescription)
         }
     }
+    
+    func testValidArrayOfDictionaries() {
+        
+        
+        
+    }
+    
+    
 }

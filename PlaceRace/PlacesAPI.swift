@@ -42,9 +42,7 @@ class PlacesAPI {
                     //remove this responsibility to jsonparser
                     do {
                         let responseObject = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-                        guard let responseDict = responseObject as? NSDictionary else {
-                            return
-                        }
+                        guard let responseDict = responseObject as? NSDictionary else { return }
                         handler(responseDict, nil)
                         
                     } catch let error as NSError {
