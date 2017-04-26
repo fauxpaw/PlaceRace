@@ -31,6 +31,8 @@
 		4C4287721E9253E100A5323B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4287701E9253E100A5323B /* LaunchScreen.storyboard */; };
 		4C58A4A61EB049780029AE92 /* RouteCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58A4A51EB049780029AE92 /* RouteCreator.swift */; };
 		4C58A4A81EB04BF60029AE92 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58A4A71EB04BF60029AE92 /* Extensions.swift */; };
+		4C58A4AA1EB0559C0029AE92 /* RouteCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58A4A91EB0559C0029AE92 /* RouteCreatorTests.swift */; };
+		4C58A4AC1EB063180029AE92 /* ShuffleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58A4AB1EB063180029AE92 /* ShuffleTest.swift */; };
 		4C5E5DCF1E9D962100D519B3 /* ObjectiveAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E5DCE1E9D962100D519B3 /* ObjectiveAnnotation.swift */; };
 		4C5E5DD11E9D9B7000D519B3 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E5DD01E9D9B7000D519B3 /* UserAnnotation.swift */; };
 		4C9D17C11EAF269700BA9443 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D17C01EAF269700BA9443 /* JSONParser.swift */; };
@@ -88,6 +90,8 @@
 		4C56DCCC1E92D2E600344232 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "Pods/../build/Debug-iphoneos/ParseUI/ParseUI.framework"; sourceTree = "<group>"; };
 		4C58A4A51EB049780029AE92 /* RouteCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCreator.swift; sourceTree = "<group>"; };
 		4C58A4A71EB04BF60029AE92 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4C58A4A91EB0559C0029AE92 /* RouteCreatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCreatorTests.swift; sourceTree = "<group>"; };
+		4C58A4AB1EB063180029AE92 /* ShuffleTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShuffleTest.swift; sourceTree = "<group>"; };
 		4C5E5DCE1E9D962100D519B3 /* ObjectiveAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveAnnotation.swift; sourceTree = "<group>"; };
 		4C5E5DD01E9D9B7000D519B3 /* UserAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
 		4C9D17C01EAF269700BA9443 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
@@ -347,6 +351,8 @@
 			children = (
 				4CFEEB091EA9F13700EECA8C /* Info.plist */,
 				4CFEEB0F1EA9F26200EECA8C /* ObjectiveTests.swift */,
+				4C58A4A91EB0559C0029AE92 /* RouteCreatorTests.swift */,
+				4C58A4AB1EB063180029AE92 /* ShuffleTest.swift */,
 			);
 			path = PlaceRaceTests;
 			sourceTree = "<group>";
@@ -620,6 +626,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C58A4AC1EB063180029AE92 /* ShuffleTest.swift in Sources */,
+				4C58A4AA1EB0559C0029AE92 /* RouteCreatorTests.swift in Sources */,
 				4CFEEB101EA9F26200EECA8C /* ObjectiveTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
