@@ -19,25 +19,12 @@ class PlaceFactory {
         
         var places = [Objective]() 
         
-        if !loadingInProgress {
-            loadingInProgress = true
-            let loader = PlacesAPI()
-            
-            loader.getPlaces(nearLocation: centerPoint, radius: radius, handler: { (placesDict, error) in
-                if let dict = placesDict {
-                    //print(dict)
-                    guard let placesArray = dict.object(forKey: "results") as? [[String:Any]] else {return}
-                    for placeDictionary in placesArray {
-                        
-                        if let place = Objective(json: placeDictionary) {
-                            places.append(place)
-                        }
-                    }
-                    handler(places)
-                }
-            })
-        }
+        
+    
     }
     
+    func createPlacesFromArrayOfDictionaries() {
+        
+    }
 
 }
