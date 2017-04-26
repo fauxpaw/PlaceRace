@@ -137,7 +137,9 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
                 if let dic = rootDic {
                     guard let array = JSONParser.dictionaryRootToArrayOfDict(rootObj: dic, key: "results") else {return}
                     
-                    let results = ObjectiveFactory.shared.createObjectives(fromArrayOfDict: array)
+                    var results = ObjectiveFactory.shared.createObjectives(fromArrayOfDict: array)
+                    //print(RouteCreator.shared.getNewValidRoute(input: &results))
+                    print(RouteCreator.shared.evaluateNewListOrder(input: &results))
                 }
             })
             

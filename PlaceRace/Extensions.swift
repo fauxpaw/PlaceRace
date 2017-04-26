@@ -16,12 +16,10 @@ extension MutableCollection where Index == Int {
         
         for currentPos in startIndex ..< endIndex - 1 {
             
-            let destination = Int(arc4random_uniform(UInt32(endIndex - 1))) + currentPos
+            let destination = Int(arc4random_uniform(UInt32(endIndex - currentPos))) + currentPos
             if currentPos != destination {
                 swap(&self[currentPos], &self[destination])
             }
-            
         }
     }
-    
 }

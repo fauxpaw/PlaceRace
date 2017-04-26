@@ -39,6 +39,13 @@ class Objective {
         }
     }
     
+    func getCLLocation() -> CLLocation {
+        let lat = CLLocationDegrees(self.coordinates.latitude)
+        let lng = CLLocationDegrees(self.coordinates.longitude)
+        let loc = CLLocation(latitude: lat, longitude: lng)
+        return loc
+    }
+    
     func description() {
         print("My place name is: \(self.name), whose coords are \(self.coordinates) and status is \(self.completed). ")
     }

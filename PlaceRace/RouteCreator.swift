@@ -20,17 +20,46 @@ class RouteCreator {
         return input
     }
     
-    fileprivate func evaluateNewListOrder( input: inout[Objective]) -> [Objective] {
+    func evaluateNewListOrder(input: inout[Objective]) -> Bool {
         
+        let accpetableDisparity = 0.05
+        let baseDistance = calculateRouteDistance(input: input)
+        let upperBound = baseDistance + baseDistance * accpetableDisparity
+        let lowerBound = baseDistance - baseDistance * accpetableDisparity
         
-        let newOrder = input.shuffle()
+        //reorder
+        input.shuffle()
+        let newDis = calculateRouteDistance(input: input)
         
+        print("Base Distance is: \(baseDistance)")
+        print("New Distance is: \(newDis)")
         
-        return input
+        if newDis <= upperBound || newDis >= lowerBound {
+            return true
+        }
+        
+        //find difference
+        
+        //check diff vs okvalue
+        
+        return false
     }
     
-    func calculateRouteDistance() {
+    func calculateRouteDistance(input: [Objective]) -> Double {
+        print("Input count: \(input.count)")
+        //distance in meters
+        var totalDis = 0.0
         
+        for (i, place) in input.enumerated() {
+            if i > 0 && i < input.count - 1 {
+
+                let loc1 = input[i-1].getCLLocation()
+                let loc2 = place.getCLLocation()
+                totalDis += loc1.distance(from: loc2)
+            }
+        }
+        
+        return totalDis
     }
     
 }
