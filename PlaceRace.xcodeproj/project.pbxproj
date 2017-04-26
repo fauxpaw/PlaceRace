@@ -29,6 +29,8 @@
 		4C42876D1E9253E100A5323B /* PlaceRace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C42876B1E9253E100A5323B /* PlaceRace.xcdatamodeld */; };
 		4C42876F1E9253E100A5323B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C42876E1E9253E100A5323B /* Assets.xcassets */; };
 		4C4287721E9253E100A5323B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4287701E9253E100A5323B /* LaunchScreen.storyboard */; };
+		4C58A4A61EB049780029AE92 /* RouteCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58A4A51EB049780029AE92 /* RouteCreator.swift */; };
+		4C58A4A81EB04BF60029AE92 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58A4A71EB04BF60029AE92 /* Extensions.swift */; };
 		4C5E5DCF1E9D962100D519B3 /* ObjectiveAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E5DCE1E9D962100D519B3 /* ObjectiveAnnotation.swift */; };
 		4C5E5DD11E9D9B7000D519B3 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E5DD01E9D9B7000D519B3 /* UserAnnotation.swift */; };
 		4C9D17C11EAF269700BA9443 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D17C01EAF269700BA9443 /* JSONParser.swift */; };
@@ -42,7 +44,6 @@
 		4CE6677E1E966F36009135F0 /* GlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6677D1E966F36009135F0 /* GlobalVars.swift */; };
 		4CF437F81EAF3ED800E185D2 /* ObjectiveFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF437F71EAF3ED800E185D2 /* ObjectiveFactory.swift */; };
 		4CFEEAF91EA995A900EECA8C /* place.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CFEEAF81EA995A900EECA8C /* place.json */; };
-		4CFEEAFB1EA9D2E400EECA8C /* ParseServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFEEAFA1EA9D2E400EECA8C /* ParseServerAPI.swift */; };
 		4CFEEAFD1EA9E0FD00EECA8C /* PlaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFEEAFC1EA9E0FD00EECA8C /* PlaceFactory.swift */; };
 		4CFEEB101EA9F26200EECA8C /* ObjectiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFEEB0F1EA9F26200EECA8C /* ObjectiveTests.swift */; };
 		E53E4D680BD0057835DFE8A1 /* Pods_PlaceRace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6D7C2AF8E56CD5EEE93E00 /* Pods_PlaceRace.framework */; };
@@ -85,6 +86,8 @@
 		4C56DCCA1E92D2E600344232 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Pods/../build/Debug-iphoneos/Bolts/Bolts.framework"; sourceTree = "<group>"; };
 		4C56DCCB1E92D2E600344232 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Pods/../build/Debug-iphoneos/Parse/Parse.framework"; sourceTree = "<group>"; };
 		4C56DCCC1E92D2E600344232 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "Pods/../build/Debug-iphoneos/ParseUI/ParseUI.framework"; sourceTree = "<group>"; };
+		4C58A4A51EB049780029AE92 /* RouteCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCreator.swift; sourceTree = "<group>"; };
+		4C58A4A71EB04BF60029AE92 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4C5E5DCE1E9D962100D519B3 /* ObjectiveAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveAnnotation.swift; sourceTree = "<group>"; };
 		4C5E5DD01E9D9B7000D519B3 /* UserAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
 		4C9D17C01EAF269700BA9443 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
@@ -98,7 +101,6 @@
 		4CE6677D1E966F36009135F0 /* GlobalVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVars.swift; sourceTree = "<group>"; };
 		4CF437F71EAF3ED800E185D2 /* ObjectiveFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveFactory.swift; sourceTree = "<group>"; };
 		4CFEEAF81EA995A900EECA8C /* place.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = place.json; sourceTree = "<group>"; };
-		4CFEEAFA1EA9D2E400EECA8C /* ParseServerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseServerAPI.swift; sourceTree = "<group>"; };
 		4CFEEAFC1EA9E0FD00EECA8C /* PlaceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceFactory.swift; sourceTree = "<group>"; };
 		4CFEEB051EA9F13600EECA8C /* PlaceRaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaceRaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFEEB091EA9F13700EECA8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				4C21E1E71E9AFCA9006F04AE /* Race.swift */,
 				4C21E1EB1E9B0309006F04AE /* Objective.swift */,
 				4CF437F71EAF3ED800E185D2 /* ObjectiveFactory.swift */,
+				4C58A4A51EB049780029AE92 /* RouteCreator.swift */,
 			);
 			name = "Game Lobby";
 			sourceTree = "<group>";
@@ -155,12 +158,12 @@
 		4C11D1D51E943359005F7CC4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4CFEEAFA1EA9D2E400EECA8C /* ParseServerAPI.swift */,
 				4CA089331EA5D1B000DFC88A /* PlacesAPI.swift */,
 				4C21E1F21E9C3D90006F04AE /* Play */,
 				4C6FF24E1E95C9730043E7EA /* Signup */,
 				4C0251F11E96B12B0066244A /* Create */,
 				4C9D17C01EAF269700BA9443 /* JSONParser.swift */,
+				4C58A4A71EB04BF60029AE92 /* Extensions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -589,13 +592,13 @@
 				4CE6677E1E966F36009135F0 /* GlobalVars.swift in Sources */,
 				4CABC2D71E9399D300CF8B19 /* LoginViewController.swift in Sources */,
 				4C42876D1E9253E100A5323B /* PlaceRace.xcdatamodeld in Sources */,
+				4C58A4A61EB049780029AE92 /* RouteCreator.swift in Sources */,
 				4C21E1EC1E9B0309006F04AE /* Objective.swift in Sources */,
 				4C5E5DD11E9D9B7000D519B3 /* UserAnnotation.swift in Sources */,
 				4CFEEAFD1EA9E0FD00EECA8C /* PlaceFactory.swift in Sources */,
 				4C11D1D91E9435D2005F7CC4 /* SignupIssue.swift in Sources */,
 				4CE667761E965F49009135F0 /* GameSettingPlayerCountTableViewCell.swift in Sources */,
 				4C21E1F41E9C3E2E006F04AE /* Minimap.swift in Sources */,
-				4CFEEAFB1EA9D2E400EECA8C /* ParseServerAPI.swift in Sources */,
 				4C066F231E998C09004D06A4 /* GameSettingPlayFieldTableViewCell.swift in Sources */,
 				4CE667781E965F5B009135F0 /* GameSettingLocationCountTableViewCell.swift in Sources */,
 				4C21E1F01E9C3CD9006F04AE /* InGameViewController.swift in Sources */,
@@ -608,6 +611,7 @@
 				4C21E1E41E9A9A62006F04AE /* LobbyInteractionClearanceLevel.swift in Sources */,
 				4C11D1D21E93D8C6005F7CC4 /* InputValidation.swift in Sources */,
 				4CA089341EA5D1B000DFC88A /* PlacesAPI.swift in Sources */,
+				4C58A4A81EB04BF60029AE92 /* Extensions.swift in Sources */,
 				4C4287651E9253E100A5323B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

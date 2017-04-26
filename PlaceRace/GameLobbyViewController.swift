@@ -30,7 +30,6 @@ class GameLobbyViewController: UIViewController, UITableViewDelegate, UITableVie
         self.addJoinerToPlayersList()
         //TODO: fetch game initial info from server
         //TODO: Handle join collision
-        
     }
     
     override func viewDidLoad() {

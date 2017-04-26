@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 final class ObjectiveFactory {
     
     private init() { }

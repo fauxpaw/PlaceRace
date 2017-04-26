@@ -21,9 +21,11 @@ class PlacesAPI {
     let apiKey = "AIzaSyCyK0N0v5-vHQ9FrMSpxGorkb42k9QUdQk"
     let nearbySearchString = "nearbysearch/json?location="
     
+    private init() {}
+    static let shared = PlacesAPI()
     //fetch list of places near a specified location
 
-    func getPlaces(nearLocation location: CLLocation, radius: Int, handler: @escaping (NSDictionary?, NSError?) -> Void) {
+    func getPlaces(nearLocation location: CLLocation, radius: Int, handler: @escaping ([String: Any]?, NSError?) -> Void) {
         
         let latitude = location.coordinate.latitude
         let longitude = location.coordinate.longitude
@@ -41,7 +43,7 @@ class PlacesAPI {
                     //remove this responsibility to jsonparser
                     do {
                         let responseObject = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-                        guard let responseDict = responseObject as? NSDictionary else { return }
+                        guard let responseDict = responseObject as? [String: Any] else { return }
                         handler(responseDict, nil)
                         
                     } catch let error as NSError {

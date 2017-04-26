@@ -24,7 +24,7 @@ class JSONParser {
     }
    
     
-    func dictionaryRootToArrayOfDict(rootObj: [String: Any], key: String) -> [[String: Any]]? {
+    class func dictionaryRootToArrayOfDict(rootObj: [String: Any], key: String) -> [[String: Any]]? {
         
         let array : [[String: Any]] = rootObj[key] as! [[String: Any]]
         return array

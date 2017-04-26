@@ -12,7 +12,6 @@ import Parse
 
 class CreateGameViewController: UITableViewController, CLLocationManagerDelegate  {
     
-    
     let locManager = CLLocationManager()
     var publicGame = true
     var desiredNumberOfPlayers: Int = 4
@@ -119,15 +118,29 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
             print("Playfield Center = \(playFieldCenter)")
             print("Playfield Radius = \(playRadius)")
             
-            let factory = PlaceFactory()
             let lat = CLLocationDegrees(playFieldCenter.latitude)
             let lng = CLLocationDegrees(playFieldCenter.longitude)
             let loc = CLLocation(latitude: lat, longitude: lng)
-            factory.createNearbyPlaces(centerPoint: loc, radius: playRadius, handler: { (places) in
-                if let first = places.first {
-                    first.description()
+            
+            /*factory.createNearbyPlaces(centerPoint: loc, radius: playRadius, handler: { (places) in
+                for item in places {
+                    item.description()
+                }
+            }) */
+            
+            PlacesAPI.shared.getPlaces(nearLocation: loc, radius: self.playRadius, handler: { (rootDic, error) in
+                
+                if let error = error {
+                    print("could not get valid JSON root object. check \(error.localizedDescription)")
+                }
+                
+                if let dic = rootDic {
+                    guard let array = JSONParser.dictionaryRootToArrayOfDict(rootObj: dic, key: "results") else {return}
+                    
+                    let results = ObjectiveFactory.shared.createObjectives(fromArrayOfDict: array)
                 }
             })
+            
             
             let target = segue.destination as! GameLobbyViewController
             target.gameSettings = self
