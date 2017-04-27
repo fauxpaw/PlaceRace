@@ -138,7 +138,11 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
                     guard let array = JSONParser.dictionaryRootToArrayOfDict(rootObj: dic, key: "results") else {return}
                     
                     var results = ObjectiveFactory.shared.createObjectives(fromArrayOfDict: array)
-                   print(RouteCreator.shared.getRoutes(input: &results, p: 1))
+                   let routes = RouteCreator.shared.getRoutes(input: &results, p: 6)
+                    
+                    for route in routes {
+                        Route(input: route).getTotalDistance()
+                    }
                 }
             })
             

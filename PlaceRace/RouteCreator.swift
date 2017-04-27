@@ -23,7 +23,7 @@ class RouteCreator {
     func getRoutes(input: inout [Objective], p: Int) -> [[Objective]] {
         
         let truncated = self.truncateObjectivesList(toDesiredAmount: p, withList: &input)
-        if truncated.count > 6 {
+        if truncated.count > 8 {
             let lr = splitArray(input: truncated)
             let left = self.findPossibleCombinations(input: lr[0])
             let right = self.findPossibleCombinations(input: lr[1])
@@ -123,8 +123,6 @@ class RouteCreator {
     }
     
     fileprivate func calculateRouteDistance(input: [Objective]) -> Double {
-        print("Input count: \(input.count)")
-        
         //distance in meters
         var totalDis = 0.0
         
@@ -144,7 +142,7 @@ class RouteCreator {
         
         let baseDistance = a
         let newDis = b
-        let accpetableDisparity = 0.1
+        let accpetableDisparity = 0.05
         let upperBound = baseDistance * (1 + accpetableDisparity)
         let lowerBound = baseDistance * (1 - accpetableDisparity)
         
