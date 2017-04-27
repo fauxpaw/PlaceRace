@@ -9,6 +9,7 @@
 import XCTest
 import Foundation
 
+@testable import Pods_PlaceRace
 class ShuffleTest: XCTestCase {
     
     override func setUp() {
@@ -45,7 +46,7 @@ class ShuffleTest: XCTestCase {
         
     }
     
-    func testPossibleCombinations() {
+    func testPossibleCombinationsAlgorithm() {
         
         let array = [1,2,3,4,5]
         var count = 0
@@ -70,10 +71,10 @@ class ShuffleTest: XCTestCase {
         
     }
     
-    func testPerformanceExample() {
+    func testPermutationsAlgorithmPerformance() {
         // This is an example of a performance test case.
         self.measure {
-            self.testPossibleCombinations()
+            self.testPossibleCombinationsAlgorithm()
         }
     }
     
