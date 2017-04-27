@@ -47,7 +47,7 @@
 		4CF437F81EAF3ED800E185D2 /* ObjectiveFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF437F71EAF3ED800E185D2 /* ObjectiveFactory.swift */; };
 		4CFEEAF91EA995A900EECA8C /* place.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CFEEAF81EA995A900EECA8C /* place.json */; };
 		4CFEEAFD1EA9E0FD00EECA8C /* PlaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFEEAFC1EA9E0FD00EECA8C /* PlaceFactory.swift */; };
-		4CFEEB101EA9F26200EECA8C /* ObjectiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFEEB0F1EA9F26200EECA8C /* ObjectiveTests.swift */; };
+		4CFEEB101EA9F26200EECA8C /* JsonParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFEEB0F1EA9F26200EECA8C /* JsonParsingTests.swift */; };
 		E53E4D680BD0057835DFE8A1 /* Pods_PlaceRace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6D7C2AF8E56CD5EEE93E00 /* Pods_PlaceRace.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,7 +108,7 @@
 		4CFEEAFC1EA9E0FD00EECA8C /* PlaceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceFactory.swift; sourceTree = "<group>"; };
 		4CFEEB051EA9F13600EECA8C /* PlaceRaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaceRaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFEEB091EA9F13700EECA8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4CFEEB0F1EA9F26200EECA8C /* ObjectiveTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveTests.swift; sourceTree = "<group>"; };
+		4CFEEB0F1EA9F26200EECA8C /* JsonParsingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParsingTests.swift; sourceTree = "<group>"; };
 		65787FD30CDB4D3AF3C860A0 /* Pods-PlaceRaceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRaceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRaceTests/Pods-PlaceRaceTests.release.xcconfig"; sourceTree = "<group>"; };
 		6BF3C0FF5BBFEA74F2B49E7C /* Pods-PlaceRace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRace.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRace/Pods-PlaceRace.release.xcconfig"; sourceTree = "<group>"; };
 		8448B69CA910745F7F79CBB0 /* Pods-PlaceRaceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceRaceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceRaceTests/Pods-PlaceRaceTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -350,7 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				4CFEEB091EA9F13700EECA8C /* Info.plist */,
-				4CFEEB0F1EA9F26200EECA8C /* ObjectiveTests.swift */,
+				4CFEEB0F1EA9F26200EECA8C /* JsonParsingTests.swift */,
 				4C58A4A91EB0559C0029AE92 /* RouteCreatorTests.swift */,
 				4C58A4AB1EB063180029AE92 /* ShuffleTest.swift */,
 			);
@@ -628,7 +628,7 @@
 			files = (
 				4C58A4AC1EB063180029AE92 /* ShuffleTest.swift in Sources */,
 				4C58A4AA1EB0559C0029AE92 /* RouteCreatorTests.swift in Sources */,
-				4CFEEB101EA9F26200EECA8C /* ObjectiveTests.swift in Sources */,
+				4CFEEB101EA9F26200EECA8C /* JsonParsingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

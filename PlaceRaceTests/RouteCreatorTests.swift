@@ -8,7 +8,7 @@
 
 import XCTest
 import CoreLocation
-@testable import Pods_PlaceRace
+
 
 class RouteCreatorTests: XCTestCase {
     
@@ -45,6 +45,28 @@ class RouteCreatorTests: XCTestCase {
         
     }
     
+    func testPairUnequalSubArrays() {
+        
+        let arr1 = [[1],[2],[3],[4]]
+        let arr2 = [[5],[6],[7],[8],[9]]
+        var retValue = [[Int]]()
+        
+        if arr1.count > arr2.count {
+            
+        } else {
+            for num in 0..<arr2.count {
+                print(num % arr1.count)
+                let array : [Int] = arr1[num % arr1.count] + arr2[num]
+                retValue.append(array)
+            }
+        }
+        
+        XCTAssert(retValue.count == 5)
+        XCTAssertEqual([1,5], retValue[0])
+        XCTAssertEqual([1,9], retValue[4])
+        
+    }
+    
     func testSplitArrayAlgorithm () {
         
         let array = [1,2,3,4,5,6,7,8,9,10]
@@ -60,6 +82,9 @@ class RouteCreatorTests: XCTestCase {
             newArr.append(right)
             
         }
+        
+        XCTAssertTrue(newArr.count == 2)
+        XCTAssertTrue(newArr[0].count == 5 && newArr[1].count == 5)
     }
     
     func testValidRouteEvaulation() {

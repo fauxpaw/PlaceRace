@@ -64,7 +64,7 @@ class RouteCreator {
         var iterations = 0
         var count = 0
         
-        func permuteWirth(_ a: [Objective], _ n: Int) {
+        func permute(_ a: [Objective], _ n: Int) {
             if n == 0 {
                 //print(a) // display the current permutation
                 let distance = self.calculateRouteDistance(input: a)
@@ -77,16 +77,16 @@ class RouteCreator {
                 iterations += 1
             } else {
                 var a = a
-                permuteWirth(a, n - 1)
+                permute(a, n - 1)
                 for i in 0..<n {
                     swap(&a[i], &a[n])
-                    permuteWirth(a, n - 1)
+                    permute(a, n - 1)
                     swap(&a[i], &a[n])
                 }
             }
         }
         
-        permuteWirth(input, input.count - 1)
+        permute(input, input.count - 1)
         print("Performed \(iterations) checks")
         print("Valid routes found: \(count)")
         return output
