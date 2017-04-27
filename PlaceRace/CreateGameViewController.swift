@@ -137,12 +137,16 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
                 if let dic = rootDic {
                     guard let array = JSONParser.dictionaryRootToArrayOfDict(rootObj: dic, key: "results") else {return}
                     
+                    //Below is the default list
                     var results = ObjectiveFactory.shared.createObjectives(fromArrayOfDict: array)
-                   let routes = RouteCreator.shared.getRoutes(input: &results, p: 6)
+                    //Below is the possible routes within reason
+                    let routes = RouteCreator.shared.getRoutes(input: &results, p: 6)
+                    let r1 = routes[0]
+                    let r2 = routes[1]
                     
-                    for route in routes {
-                        Route(input: route).getTotalDistance()
-                    }
+                    let race = TestRace(input: combo)
+                    
+                    race.saveInBackground()
                 }
             })
             

@@ -13,14 +13,8 @@ import Parse
 class Objective {
     
     var name: String
-    //var imgUrl: String?
-    //var info: String?
-    //var category: String?
     var coordinates: CLLocationCoordinate2D
     var completed : Bool
-    
-    /*init(name: String, imgUrl: String, info: String, category: String, coordinates: CLLocationCoordinate2D) {
-    }*/
     
     init? (json: [String: Any]) {
     
@@ -48,5 +42,14 @@ class Objective {
     
     func description() {
         print("My place name is: \(self.name), whose coords are \(self.coordinates) and status is \(self.completed). ")
+    }
+    
+    func dataAsDictionary() -> [String: Any] {
+        var dic = Dictionary<String, Any>()
+        dic["name"] = self.name
+        dic["lat"] = coordinates.latitude
+        dic["lng"] = coordinates.longitude
+        dic["completed"] = false
+        return dic
     }
 }
