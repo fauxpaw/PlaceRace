@@ -9,6 +9,7 @@
 import XCTest
 import Foundation
 
+@testable import Pods_PlaceRace
 class ShuffleTest: XCTestCase {
     
     override func setUp() {
@@ -45,31 +46,35 @@ class ShuffleTest: XCTestCase {
         
     }
     
-    func testPossibleCombinations() {
+    func testPossibleCombinationsAlgorithm() {
         
+        let array = [1,2,3,4,5]
+        var count = 0
+        
+        func permuteWirth<T>(_ a: [T], _ n: Int) {
+            if n == 0 {
+                //print(a) // display the current permutation
+                count += 1
+            } else {
+                var a = a
+                permuteWirth(a, n - 1)
+                for i in 0..<n {
+                    swap(&a[i], &a[n])
+                    permuteWirth(a, n - 1)
+                    swap(&a[i], &a[n])
+                }
+            }
+        }
+        
+        permuteWirth(array, array.count - 1)
+        XCTAssertEqual(count, 120)
         
     }
     
-    func testPerformanceExample() {
+    func testPermutationsAlgorithmPerformance() {
         // This is an example of a performance test case.
         self.measure {
-            let array = [1,2,3,4,5,6,7]
-            
-            func permuteWirth<T>(_ a: [T], _ n: Int) {
-                if n == 0 {
-                    print(a)   // display the current permutation
-                } else {
-                    var a = a
-                    permuteWirth(a, n - 1)
-                    for i in 0..<n {
-                        swap(&a[i], &a[n])
-                        permuteWirth(a, n - 1)
-                        swap(&a[i], &a[n])
-                    }
-                }
-            }
-            
-            permuteWirth(array, array.count - 1)
+            self.testPossibleCombinationsAlgorithm()
         }
     }
     
