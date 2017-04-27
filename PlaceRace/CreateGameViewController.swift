@@ -137,13 +137,14 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
                 if let dic = rootDic {
                     guard let array = JSONParser.dictionaryRootToArrayOfDict(rootObj: dic, key: "results") else {return}
                     
-                    let results = ObjectiveFactory.shared.createObjectives(fromArrayOfDict: array)
-                    //print(RouteCreator.shared.getNewValidRoute(input: &results))
-                   let possibleRoutes = RouteCreator.shared.findPossibleCombinations(input: results)
-                    print("Possible routes count: \(possibleRoutes.count)")
+                    var results = ObjectiveFactory.shared.createObjectives(fromArrayOfDict: array)
+                   let routes = RouteCreator.shared.getRoutes(input: &results, p: 6)
+                    
+                    for route in routes {
+                        Route(input: route).getTotalDistance()
+                    }
                 }
             })
-            
             
             let target = segue.destination as! GameLobbyViewController
             target.gameSettings = self

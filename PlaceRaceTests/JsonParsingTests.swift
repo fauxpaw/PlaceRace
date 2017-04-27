@@ -9,7 +9,7 @@
 import XCTest
 @testable import PlaceRace
 
-class ObjectiveTests: XCTestCase {
+class JsonParsingTests: XCTestCase {
     
     var myData = Data()
     
