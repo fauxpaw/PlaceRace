@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ParseMutableClientConfiguration.server = "https://quiet-fortress-46328.herokuapp.com/parse"
         })
         
+        TestRace.registerSubclass()
         Parse.initialize(with: parseConfiguration)
         
         return true

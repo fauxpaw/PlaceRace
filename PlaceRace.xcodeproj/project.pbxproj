@@ -36,6 +36,8 @@
 		4C5E5DCF1E9D962100D519B3 /* ObjectiveAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E5DCE1E9D962100D519B3 /* ObjectiveAnnotation.swift */; };
 		4C5E5DD11E9D9B7000D519B3 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E5DD01E9D9B7000D519B3 /* UserAnnotation.swift */; };
 		4C707ABB1EB2010700530AE8 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C707ABA1EB2010700530AE8 /* Route.swift */; };
+		4C707ABD1EB2081600530AE8 /* TestRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C707ABC1EB2081600530AE8 /* TestRace.swift */; };
+		4C707AC11EB2121700530AE8 /* JSONRouteMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C707AC01EB2121700530AE8 /* JSONRouteMakerTests.swift */; };
 		4C9D17C11EAF269700BA9443 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D17C01EAF269700BA9443 /* JSONParser.swift */; };
 		4CA089341EA5D1B000DFC88A /* PlacesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA089331EA5D1B000DFC88A /* PlacesAPI.swift */; };
 		4CABC2D71E9399D300CF8B19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */; };
@@ -96,6 +98,8 @@
 		4C5E5DCE1E9D962100D519B3 /* ObjectiveAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveAnnotation.swift; sourceTree = "<group>"; };
 		4C5E5DD01E9D9B7000D519B3 /* UserAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
 		4C707ABA1EB2010700530AE8 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		4C707ABC1EB2081600530AE8 /* TestRace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRace.swift; sourceTree = "<group>"; };
+		4C707AC01EB2121700530AE8 /* JSONRouteMakerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONRouteMakerTests.swift; sourceTree = "<group>"; };
 		4C9D17C01EAF269700BA9443 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		4CA089331EA5D1B000DFC88A /* PlacesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesAPI.swift; sourceTree = "<group>"; };
 		4CABC2D61E9399D300CF8B19 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 				4CF437F71EAF3ED800E185D2 /* ObjectiveFactory.swift */,
 				4C58A4A51EB049780029AE92 /* RouteCreator.swift */,
 				4C707ABA1EB2010700530AE8 /* Route.swift */,
+				4C707ABC1EB2081600530AE8 /* TestRace.swift */,
 			);
 			name = "Game Lobby";
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 				4CFEEB0F1EA9F26200EECA8C /* JsonParsingTests.swift */,
 				4C58A4A91EB0559C0029AE92 /* RouteCreatorTests.swift */,
 				4C58A4AB1EB063180029AE92 /* ShuffleTest.swift */,
+				4C707AC01EB2121700530AE8 /* JSONRouteMakerTests.swift */,
 			);
 			path = PlaceRaceTests;
 			sourceTree = "<group>";
@@ -621,6 +627,7 @@
 				4C21E1E41E9A9A62006F04AE /* LobbyInteractionClearanceLevel.swift in Sources */,
 				4C11D1D21E93D8C6005F7CC4 /* InputValidation.swift in Sources */,
 				4CA089341EA5D1B000DFC88A /* PlacesAPI.swift in Sources */,
+				4C707ABD1EB2081600530AE8 /* TestRace.swift in Sources */,
 				4C58A4A81EB04BF60029AE92 /* Extensions.swift in Sources */,
 				4C4287651E9253E100A5323B /* AppDelegate.swift in Sources */,
 			);
@@ -630,6 +637,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C707AC11EB2121700530AE8 /* JSONRouteMakerTests.swift in Sources */,
 				4C58A4AC1EB063180029AE92 /* ShuffleTest.swift in Sources */,
 				4C58A4AA1EB0559C0029AE92 /* RouteCreatorTests.swift in Sources */,
 				4CFEEB101EA9F26200EECA8C /* JsonParsingTests.swift in Sources */,
