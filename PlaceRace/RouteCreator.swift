@@ -14,13 +14,12 @@ class RouteCreator {
     static let shared = RouteCreator()
     
     //take in a list of objectives, return a new order (with constraints) of objectives
-    func getNewValidRoute(input: inout[Objective]) -> [Objective] {
+    func getNewValidRoutes(input: inout[Objective]) -> [Objective] {
      
-        
         return input
     }
     
-    func evaluateNewListOrder(input: inout[Objective]) -> Bool {
+    func evaluateNewList(input: inout[Objective]) -> Bool {
         
         let accpetableDisparity = 0.05
         let baseDistance = calculateRouteDistance(input: input)

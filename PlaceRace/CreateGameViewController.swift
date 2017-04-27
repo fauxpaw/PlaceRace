@@ -139,7 +139,7 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
                     
                     var results = ObjectiveFactory.shared.createObjectives(fromArrayOfDict: array)
                     //print(RouteCreator.shared.getNewValidRoute(input: &results))
-                    print(RouteCreator.shared.evaluateNewListOrder(input: &results))
+                    print(RouteCreator.shared.evaluateNewList(input: &results))
                 }
             })
             
