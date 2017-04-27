@@ -45,14 +45,29 @@ class RouteCreatorTests: XCTestCase {
         
     }
     
-    func testPairUnequalSubArrays() {
+    func testPairSubArrays() {
         
-        let arr1 = [[1],[2],[3],[4]]
-        let arr2 = [[5],[6],[7],[8],[9]]
+        //let arr1 = [[1],[2],[3],[4]]
+        //let arr2 = [[5],[6],[7],[8],[9]]
+        
+        let arr1 = [[1],[2],[3],[4],[5]]
+        let arr2 = [[6],[7],[8],[9]]
         var retValue = [[Int]]()
         
+        
+        
+        if arr1.count == arr2.count {
+            for num in 0..<arr1.count {
+              let arr : [Int] = arr1[num] + arr2[num]
+                retValue.append(arr)
+            }
+        }
+        
         if arr1.count > arr2.count {
-            
+            for num in 0..<arr1.count {
+                let array : [Int] = arr1[num] + arr2[num % arr2.count]
+                retValue.append(array)
+            }
         } else {
             for num in 0..<arr2.count {
                 print(num % arr1.count)
@@ -62,8 +77,10 @@ class RouteCreatorTests: XCTestCase {
         }
         
         XCTAssert(retValue.count == 5)
-        XCTAssertEqual([1,5], retValue[0])
-        XCTAssertEqual([1,9], retValue[4])
+        //XCTAssertEqual([1,5], retValue[0])
+        //XCTAssertEqual([1,9], retValue[4])
+        XCTAssertEqual([1,6], retValue[0])
+        XCTAssertEqual([5,6], retValue[4])
         
     }
     

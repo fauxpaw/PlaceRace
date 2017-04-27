@@ -13,29 +13,71 @@ import Foundation
 //truncate list to desired value
 //if value is > 5 split the list
 //permutate array or sub-arrays
-//
+//re-pair sub-arrays
 
 class RouteCreator {
     
-    init() {}
+    private init() {}
     static let shared = RouteCreator()
     
-    func evaluateDistance(a: Double, b: Double) -> Bool {
+    func getRoutes(input: inout [Objective], p: Int) -> [[Objective]] {
         
-        let baseDistance = a
-        let newDis = b
-        let accpetableDisparity = 0.05
-        let upperBound = baseDistance * (1 + accpetableDisparity)
-        let lowerBound = baseDistance * (1 - accpetableDisparity)
-        
-        if newDis >= lowerBound && newDis <= upperBound{
-            return true
+        let truncated = self.truncateObjectivesList(toDesiredAmount: p, withList: &input)
+        if truncated.count > 6 {
+            let lr = splitArray(input: truncated)
+            let left = self.findPossibleCombinations(input: lr[0])
+            let right = self.findPossibleCombinations(input: lr[1])
+            return self.pairSubArrays(arr1: left, arr2: right)
         }
         
-        return false
+        let combos = self.findPossibleCombinations(input: truncated)
+        return combos
+        
+        
     }
     
-    func truncateObjectivesList(toDesiredAmount number: Int, withList list: inout[Objective]) -> [Objective] {
+    fileprivate func splitArray(input: [Objective]) -> [[Objective]] {
+        var output = [[Objective]]()
+        let splitValue = input.count/2
+        
+        let leftSide = input[0..<splitValue]
+        let rightSide = input[splitValue..<input.count]
+        let left: [Objective] = Array(leftSide)
+        let right: [Objective] = Array(rightSide)
+        output.append(left)
+        output.append(right)
+        
+        return output
+    }
+    
+    fileprivate func pairSubArrays(arr1: [[Objective]], arr2: [[Objective]]) -> [[Objective]] {
+        
+        var retValue = [[Objective]]()
+        
+        if arr1.count == arr2.count {
+            for num in 0..<arr1.count {
+                let arr : [Objective] = arr1[num] + arr2[num]
+                retValue.append(arr)
+            }
+        }
+        
+        if arr1.count > arr2.count {
+            for num in 0..<arr1.count {
+                let array : [Objective] = arr1[num] + arr2[num % arr2.count]
+                retValue.append(array)
+            }
+        } else {
+            for num in 0..<arr2.count {
+                print(num % arr1.count)
+                let array : [Objective] = arr1[num % arr1.count] + arr2[num]
+                retValue.append(array)
+            }
+        }
+
+        return retValue
+    }
+    
+    fileprivate func truncateObjectivesList(toDesiredAmount number: Int, withList list: inout[Objective]) -> [Objective] {
         
         while list.count > number {
             let remove = arc4random_uniform(UInt32(list.count))
@@ -45,19 +87,7 @@ class RouteCreator {
         return list
     }
     
-    func evaluateInputLength(input: [Objective]) -> [[Objective]] {
-        
-        let output = [[Objective]]()
-        
-        if input.count > 5 {
-            let splitValue = input.count / 2
-            //split the array and call evaluate input again
-        }
-        
-        return output
-    }
-    
-    func findPossibleCombinations(input: [Objective]) -> [[Objective]] {
+    fileprivate func findPossibleCombinations(input: [Objective]) -> [[Objective]] {
         
         let baseDistance = self.calculateRouteDistance(input: input)
         var output = [[Objective]]()
@@ -92,7 +122,7 @@ class RouteCreator {
         return output
     }
     
-    func calculateRouteDistance(input: [Objective]) -> Double {
+    fileprivate func calculateRouteDistance(input: [Objective]) -> Double {
         print("Input count: \(input.count)")
         
         //distance in meters
@@ -108,6 +138,21 @@ class RouteCreator {
         }
         
         return totalDis
+    }
+    
+    fileprivate func evaluateDistance(a: Double, b: Double) -> Bool {
+        
+        let baseDistance = a
+        let newDis = b
+        let accpetableDisparity = 0.1
+        let upperBound = baseDistance * (1 + accpetableDisparity)
+        let lowerBound = baseDistance * (1 - accpetableDisparity)
+        
+        if newDis >= lowerBound && newDis <= upperBound{
+            return true
+        }
+        
+        return false
     }
     
 }
