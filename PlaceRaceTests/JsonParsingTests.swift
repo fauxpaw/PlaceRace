@@ -53,7 +53,7 @@ class JsonParsingTests: XCTestCase {
         }
     }
     
-    func testValidSingleDictionaries() {
+    func testValidSingleDictionary() {
         
         do {
             if let rootObject = try JSONSerialization.jsonObject(with: myData, options: .mutableContainers) as? [String: Any] {

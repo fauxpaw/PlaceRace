@@ -11,7 +11,6 @@ import Parse
 
 class TestRace: PFObject, PFSubclassing {
     
-    
     let routes : [[Objective]]
     
     init(input: [[Objective]]) {

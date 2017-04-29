@@ -9,7 +9,8 @@
 import XCTest
 import Foundation
 
-@testable import Pods_PlaceRace
+@testable import PlaceRace
+
 class ShuffleTest: XCTestCase {
     
     override func setUp() {

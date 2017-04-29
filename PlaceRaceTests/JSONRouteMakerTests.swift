@@ -8,6 +8,8 @@
 
 import XCTest
 
+@testable import PlaceRace
+
 class JSONRouteMakerTests: XCTestCase {
     
     override func setUp() {
@@ -23,6 +25,7 @@ class JSONRouteMakerTests: XCTestCase {
     func testJSONFromDictionary() {
         
         let dic = Dictionary(dictionaryLiteral: ("results", ["values"]))
+        
         do {
            let obj =  try? JSONSerialization.data(withJSONObject: dic, options: .prettyPrinted)
             if let json = obj {

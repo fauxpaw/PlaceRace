@@ -144,9 +144,9 @@ class CreateGameViewController: UITableViewController, CLLocationManagerDelegate
                     let r1 = routes[0]
                     let r2 = routes[1]
                     
-                    let race = TestRace(input: combo)
+                    //let race = TestRace(input: combo)
                     
-                    race.saveInBackground()
+                    //race.saveInBackground()
                 }
             })
             

@@ -9,6 +9,7 @@
 import XCTest
 import CoreLocation
 
+@testable import PlaceRace
 
 class RouteCreatorTests: XCTestCase {
     
@@ -45,7 +46,7 @@ class RouteCreatorTests: XCTestCase {
         
     }
     
-    func testPairSubArrays() {
+    func testPairingSubArrays() {
         
         //let arr1 = [[1],[2],[3],[4]]
         //let arr2 = [[5],[6],[7],[8],[9]]
@@ -53,8 +54,6 @@ class RouteCreatorTests: XCTestCase {
         let arr1 = [[1],[2],[3],[4],[5]]
         let arr2 = [[6],[7],[8],[9]]
         var retValue = [[Int]]()
-        
-        
         
         if arr1.count == arr2.count {
             for num in 0..<arr1.count {
@@ -110,4 +109,5 @@ class RouteCreatorTests: XCTestCase {
             
         }
     }
+    
 }
