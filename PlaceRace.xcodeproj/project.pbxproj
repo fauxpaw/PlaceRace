@@ -815,16 +815,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8448B69CA910745F7F79CBB0 /* Pods-PlaceRaceTests.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				BUNDLE_LOADER = "";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NXQBD8W8TS;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PlaceRaceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sweeney.PlaceRaceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlaceRace.app/PlaceRace";
+				TEST_HOST = "";
 			};
 			name = Debug;
 		};
@@ -832,15 +834,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65787FD30CDB4D3AF3C860A0 /* Pods-PlaceRaceTests.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				BUNDLE_LOADER = "";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NXQBD8W8TS;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PlaceRaceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sweeney.PlaceRaceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlaceRace.app/PlaceRace";
+				TEST_HOST = "";
 			};
 			name = Release;
 		};
